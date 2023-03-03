@@ -13,7 +13,7 @@ export default function Mission({ screen }: any) {
       setScreenSize(screen);
       console.log(screenSize);
     }
-  }, [screen]);
+  }, [screen, screenSize]);
   const slickSettiong = {
     dots: true,
     arrows: false,

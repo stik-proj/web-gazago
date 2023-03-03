@@ -10,7 +10,7 @@ export default function Roadmap({ screen }: any) {
     }
     setInnerScreen(screen);
     console.log(innerScreen);
-  }, []);
+  }, [innerScreen, screen]);
 
   const arrayReDivide = (arr: any, n: any) => {
     const oldArr = arr;

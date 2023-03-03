@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { useEffect, useState } from "react";
 import menuListData from "../../data/HeaderMenuListData.json";
 import HeaderMenuList from "../components/HeaerMenuList";
@@ -88,6 +89,7 @@ export default function Header() {
               {language.map((item, index) => (
                 <li className="" key={index.toString()}>
                   <a
+                    href="#"
                     onClick={() => handleLangClick(index)}
                     className={`text-[1.3rem] font-[500] text-[#999999] xl:text-[1.4rem] ${
                       currentIdx === index
