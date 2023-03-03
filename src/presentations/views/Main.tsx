@@ -8,18 +8,20 @@ import Community from "./Community";
 import Faq from "./Faq";
 import Launcher from "./Launcher";
 import Footer from "./Footer";
+import { useInView } from "react-intersection-observer";
+
 export default function Main() {
   const [screenSize, setScreenSize] = useState(0 as number);
+  const { ref, inView, entry } = useInView({
+    threshold: 0,
+  });
 
   const handleResize = () => {
     setScreenSize(window.innerWidth);
-    // }
   };
+
   const [height, setHeight] = useState(0);
-  const expRef = useRef<any>(null);
-  useEffect(() => {
-    console.log(expRef.current);
-  }, [expRef]);
+
   useEffect(() => {
     window.addEventListener("resize", handleResize);
 
@@ -37,11 +39,7 @@ export default function Main() {
             <Home />
             <Mission screen={window.innerWidth} />
           </div>
-          <Experience
-            ref={(ref) => {
-              expRef.current = ref;
-            }}
-          />
+          <Experience ref={ref} />
           <Roadmap screen={window.innerWidth} />
           <Community />
           <Faq />

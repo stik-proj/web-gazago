@@ -3,7 +3,7 @@ import listData from "../../data/experienceListData.json";
 import itemListData from "../../data/experienceItemListData.json";
 import ExperienceList from "../components/ExperienceList";
 import ItemList from "../components/itemList";
-import Slider, { Settings } from "react-slick";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 

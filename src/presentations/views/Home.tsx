@@ -1,20 +1,11 @@
 import { useEffect } from "react";
 
 export default function Home() {
-  useEffect(() => {
-    setTimeout(() => {
-      const el: any = document.querySelectorAll(".thunder");
-      console.log(el);
-      el.map((item: any) => {
-        item.classList.add("bounce");
-        console.log(item);
-      });
-    }, 2000);
-  }, []);
+  useEffect(() => {}, []);
   return (
-    <section id="Home" className="home-background overflow-hidden z-20">
-      <div className="relative z-30 flex flex-col justify-center items-center h-screen">
-        <div className=" main-cont  flex flex-col justify-center items-center ">
+    <section id="Home" className="z-20 overflow-hidden home-background">
+      <div className="relative z-30 flex flex-col items-center justify-center h-screen">
+        <div className="flex flex-col items-center justify-center main-cont">
           <img
             className="w-[239px] md:w-[362px] xl:w-[568px] xl:mt-[10rem]"
             src="img/home/img_home_logo.svg"
@@ -24,7 +15,11 @@ export default function Home() {
             돈이 되는 챌린지 시즌1
           </p>
           <div className="md:flex md:mt-[4.2rem] xl:mt-[5rem]">
-            <a href="https://gazago.page.link/gazaGO_home" target="_blank">
+            <a
+              href="https://gazago.page.link/gazaGO_home"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 className="mt-[3.4rem] md:mt-0 xl:w-[164px]"
                 src="/img/home/img_home_apple_btn_m.svg"
@@ -34,6 +29,7 @@ export default function Home() {
             <a
               href="https://play.google.com/store/apps/details?id=kr.co.eztechfin.gazaGo&hl=ko&gl=US"
               target="_blank"
+              rel="noreferrer"
             >
               <img
                 className="mt-[1rem] md:mt-0 md:ml-[1rem] xl:w-[164px]"
@@ -126,12 +122,12 @@ export default function Home() {
       </div>
       <div className="md:hidden">
         <img
-          className="absolute bottom-0 left-0 w-full z-10 "
+          className="absolute bottom-0 left-0 z-10 w-full "
           src="img/home/img_home_mountain_L_m.png "
           alt=""
         />
         <img
-          className="absolute bottom-0 left-0 w-full z-10"
+          className="absolute bottom-0 left-0 z-10 w-full"
           src="img/home/img_home_mountain_S_m.png"
           alt=""
         />
@@ -146,9 +142,9 @@ export default function Home() {
           alt=""
         />
       </div>
-      <div className="hidden md:block xl:hidden overflow-hidden">
+      <div className="hidden overflow-hidden md:block xl:hidden">
         <img
-          className="absolute w-full bottom-0 left-0 bg-arch"
+          className="absolute bottom-0 left-0 w-full bg-arch"
           src="img/home/img_home_bg_shape_arch_t.png"
           alt=""
         />
@@ -163,7 +159,7 @@ export default function Home() {
           alt=""
         />
       </div>
-      <div className="hidden xl:block overflow-hidden">
+      <div className="hidden overflow-hidden xl:block">
         <img
           className="absolute bottom-0 left-0 w-full bg-arch"
           src="img/home/img_home_bg_shape_arch_w.png"

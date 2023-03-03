@@ -4,7 +4,6 @@ export default function FaqList({ data }: any) {
   const parser = new DOMParser();
   useEffect(() => {
     const re = parser.parseFromString(data.title, "text/html");
-    console.log(re.body.innerHTML);
   });
   return (
     <div className=" md:flex md:justify-center md:ml-[3rem] 2xl:ml-[3.6rem]">
@@ -14,7 +13,7 @@ export default function FaqList({ data }: any) {
         md:w-[650px] md:pr-[3rem] md:pl-[5.8rem] md:h-[410px]
         2xl:w-[1250px] 2xl:h-[600px] 2xl:py-[6rem] "
         >
-          <div className="faq-img md:flex md:justify-between relative ">
+          <div className="relative faq-img md:flex md:justify-between ">
             <p
               className="text-[1.8rem] font-bold leading-[2.8rem] w-[214px] faq-card-line
             md:w-[264px] md:text-[2.3rem] md:leading-[3.68rem]

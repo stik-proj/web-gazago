@@ -10,7 +10,7 @@ export default function Mission({ screen }: any) {
   useEffect(() => {
     if (listData) {
       setMissionListData(listData.data);
-      console.log(screen);
+
       setScreenSize(screen);
     }
   }, [screen]);
@@ -26,7 +26,7 @@ export default function Mission({ screen }: any) {
   };
   return (
     <section id="Mission" className="relative text-center bg-black">
-      <div className="h-screen flex flex-col items-center overflow-hidden justify-center ">
+      <div className="flex flex-col items-center justify-center h-screen overflow-hidden ">
         <p className="section-title">Mission</p>
         <p className=" font-bold text-[1.8rem] max-w-[240px] mt-[3.4rem] md:max-w-[567px] md:text-[2.6rem] xl:max-w-[751px] xl:text-[3.6rem] xl:leading-[5.4rem] xl:mt-[7.2rem]">
           <span className="block font-bold text-[1.8rem] md:text-[2.6rem] xl:max-w-[751px] xl:text-[3.6rem] xl:leading-[5.4rem]">
