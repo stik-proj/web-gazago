@@ -17,8 +17,6 @@ export default function Faq() {
   useEffect(() => {
     if (faqListData) {
       setDataLength(faqListData.length);
-
-      // console.log(slideRef.current.props.children.length);
     }
   }, [faqListData]);
   const slickSettings = {

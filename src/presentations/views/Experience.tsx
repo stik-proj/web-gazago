@@ -93,7 +93,7 @@ const Experience = forwardRef((ref) => {
   return (
     <section
       id="Experience"
-      className="text-center h-full flex-col justify-center items-center py-[10rem] md:text-start"
+      className="relative text-center h-full flex-col justify-center items-center py-[10rem] md:text-start"
     >
       <p className="section-title">Experience</p>
       <ul>

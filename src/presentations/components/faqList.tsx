@@ -4,7 +4,6 @@ export default function FaqList({ data }: any) {
   const parser = new DOMParser();
   useEffect(() => {
     const re = parser.parseFromString(data.title, "text/html");
-    console.log(re.body.innerHTML);
   });
   return (
     <div className=" md:flex md:justify-center md:ml-[3rem] 2xl:ml-[3.6rem]">

@@ -17,9 +17,7 @@ export default function Main() {
   };
   const [height, setHeight] = useState(0);
   const expRef = useRef<any>(null);
-  useEffect(() => {
-    console.log(expRef.current);
-  }, [expRef]);
+  useEffect(() => {}, [expRef]);
   useEffect(() => {
     window.addEventListener("resize", handleResize);
 
@@ -32,21 +30,21 @@ export default function Main() {
     <>
       <div className="overflow-hidden">
         <Header />
-        <div className="bg-[#111111] text-white">
-          <div className="parallax">
-            <Home />
+        <div className="bg-[#111111] text-white ">
+          <Home />
+          <div className="relative z-10 bg-[#111111]">
             <Mission screen={window.innerWidth} />
+            <Experience
+              ref={(ref) => {
+                expRef.current = ref;
+              }}
+            />
+            <Roadmap screen={window.innerWidth} />
+            <Community />
+            <Faq />
+            <Launcher />
+            <Footer />
           </div>
-          <Experience
-            ref={(ref) => {
-              expRef.current = ref;
-            }}
-          />
-          <Roadmap screen={window.innerWidth} />
-          <Community />
-          <Faq />
-          <Launcher />
-          <Footer />
         </div>
       </div>
     </>

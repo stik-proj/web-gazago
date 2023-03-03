@@ -5,7 +5,6 @@ export default function Roadmap({ screen }: any) {
   const [roadmapListData, setRoadmapListData] = useState<any>(null);
   const [innerScreen, setInnerScreen] = useState(screen as Number);
   useEffect(() => {
-    console.log(screen);
     if (listData.data.length > 0) {
       arrayReDivide(listData.data, 2);
     }
@@ -21,7 +20,6 @@ export default function Roadmap({ screen }: any) {
     for (let i = 0; i < cnt; i++) {
       newArr.push(oldArr.splice(0, n));
     }
-    console.log(newArr);
     setRoadmapListData(newArr);
   };
   return (
