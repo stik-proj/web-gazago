@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "image": "img/community/img_community_discord.svg",
+      "title": "Discord",
+      "desc": "디스코드에서 같은 관심을 가진 사람들과 자유롭게 이야기 나눠보세요.",
+      "link": "https://discord.gg/Ueu7wjy5"
+    },
+    {
+      "image": "img/community/img_community_naver.svg",
+      "title": "Naver blog",
+      "desc": "네이버 블로그에서 개발자들의 이야기와 소식들을 접해보세요.",
+      "link": "https://blog.naver.com/gaza-go_crew"
+    },
+    {
+      "image": "img/community/img_community_twitter.svg",
+      "title": "Twitter",
+      "desc": "트위터에서 최신 뉴스와 업데이트를 받아보세요.",
+      "link": "https://twitter.com/gazaGO_crew"
+    },
+    {
+      "image": "img/community/img_community_insta.svg",
+      "title": "Instagram",
+      "desc": "인스타그램에서 최신 뉴스와 업데이트를 받아보세요.",
+      "link": "https://www.instagram.com/gaza.go_crew/"
+    }
+  ]
+}

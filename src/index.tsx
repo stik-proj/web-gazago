@@ -4,15 +4,14 @@ import { RouterProvider } from "react-router-dom";
 import router from "./constants/routes";
 import reportWebVitals from "./reportWebVitals";
 import "src/presentations/styles/global.scss";
+import "src/presentations/styles/slick-dots.scss";
 
 const root = ReactDOM.createRoot(document.getElementById(
   "root"
 ) as HTMLElement);
 root.render(
   <React.StrictMode>
-    <main className="flex flex-col h-screen max-w-3xl max-h-screen mx-auto">
-      <RouterProvider router={router} />
-    </main>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
