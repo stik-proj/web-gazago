@@ -12,9 +12,9 @@ import { useInView } from "react-intersection-observer";
 
 export default function Main() {
   // const [screenSize, setScreenSize] = useState(0 as number);
-  const { ref, inView, entry } = useInView({
-    threshold: 0,
-  });
+  // const { ref, inView, entry } = useInView({
+  //   threshold: 0,
+  // });
 
   const handleResize = () => {
     // setScreenSize(window.innerWidth);
@@ -34,7 +34,7 @@ export default function Main() {
           <Home />
           <div className="relative z-10 bg-[#111111]">
             <Mission screen={window.innerWidth} />
-            <Experience ref={ref} />
+            <Experience />
             <Roadmap screen={window.innerWidth} />
             <Community />
             <Faq />

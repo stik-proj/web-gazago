@@ -86,7 +86,7 @@ export default function Header() {
           >
             <ul className="">
               {language.map((item, index) => (
-                <li className="">
+                <li className="" key={index.toString()}>
                   <a
                     onClick={() => handleLangClick(index)}
                     className={`text-[1.3rem] font-[500] text-[#999999] xl:text-[1.4rem] ${

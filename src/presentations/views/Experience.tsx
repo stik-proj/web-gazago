@@ -7,7 +7,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const Experience = forwardRef((ref) => {
+const Experience = () => {
   const [experienceListData, setExperienceListData] = useState<any>(null);
   const [experienceItemListData, setExperienceItemListData] = useState<any>(
     null
@@ -118,5 +118,5 @@ const Experience = forwardRef((ref) => {
       </ul>
     </section>
   );
-});
+};
 export default Experience;

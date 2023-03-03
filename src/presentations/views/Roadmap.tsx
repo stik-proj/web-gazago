@@ -36,8 +36,9 @@ export default function Roadmap({ screen }: any) {
         } mt-[5rem] 2xl:mt[7rem]`}
       >
         {roadmapListData &&
-          roadmapListData.map((item: any) => (
+          roadmapListData.map((item: any, idx: number) => (
             <div
+              key={idx.toString()}
               className={`${
                 screen > 767 && screen < 1536
                   ? "md:flex md:justify-around md:bg-[#1d1d1d] md:border-[3px] md:border-black md:rounded-[20px] md:mt-[3.2rem]"
