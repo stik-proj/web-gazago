@@ -7,7 +7,7 @@
     Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
     "Malgun Gothic", sans-serif !important;
   font-size: 10px;
-  -webkit-tap-highlight-color:rgba(255,255,255,0);
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
 // *::-webkit-scrollbar {
@@ -16,65 +16,71 @@
 // }
 
 .home-background {
-  background: linear-gradient(137.04deg, #0EE6F3 19.9%, #0EF3D8 80.33%);
+  background: linear-gradient(137.04deg, #0ee6f3 19.9%, #0ef3d8 80.33%);
 }
 
-.section-title{
-font-family: 'Montserrat';
-font-size: 36px;
-font-weight: 700;
-line-height: 36px;
-letter-spacing: 0px;
-text-align: center;
-color:rgba(28, 226, 217, 1)
+.section-title {
+  font-family: "Montserrat";
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: rgba(28, 226, 217, 1);
 }
-@media only screen and (min-width:767px) {
-  .section-title{
-    font-size:50px;
+@media only screen and (min-width: 767px) {
+  .section-title {
+    font-size: 50px;
     -webkit-text-stroke: 2px #000000;
   }
 }
 
-@media only screen and (min-width:1023px) {
-  .section-title{
-    font-size:60px;
+@media only screen and (min-width: 1023px) {
+  .section-title {
+    font-size: 60px;
   }
 }
-.launcher-logo{
+.launcher-logo {
   // box-shadow: 0px 4px 80px 0px rgba(0, 238, 255, 0.344);
   -webkit-filter: drop-shadow(0px 4px 80px rgb(0, 238, 255));
   filter: drop-shadow(0px 4px 80px rgb(0, 238, 255));
 }
 
-.launcher-bg{
-  background: linear-gradient(180deg, #111111 38.54%, rgba(0, 0, 0, 0) 100%), conic-gradient(from 127.27deg at 50.72% 18.46%, #0EF3D8 0deg, #0EE6F3 48.75deg, #0EF3D8 360deg);
+.launcher-bg {
+  background: linear-gradient(180deg, #111111 38.54%, rgba(0, 0, 0, 0) 100%),
+    conic-gradient(
+      from 127.27deg at 50.72% 18.46%,
+      #0ef3d8 0deg,
+      #0ee6f3 48.75deg,
+      #0ef3d8 360deg
+    );
 }
 
-.footer-text{
-font-size: 1.3rem;
-line-height: 2.4rem;
-color:#939393;
+.footer-text {
+  font-size: 1.3rem;
+  line-height: 2.4rem;
+  color: #939393;
 }
 
-.current{
-  color:#000;
+.current {
+  color: #000;
   text-decoration: underline;
 }
 
-.before-l::before{
+.before-l::before {
   display: inline-block;
-  margin-right:22px;
+  margin-right: 22px;
   content: "";
   width: 20px;
   height: 20px;
-  background: #1CE2D9;
+  background: #1ce2d9;
   border-radius: 100px;
 }
 
-.before-m::before{
+.before-m::before {
   position: absolute;
-  left:3px;
-  margin-top:7px;
+  left: 3px;
+  margin-top: 7px;
   display: inline-block;
   content: "";
   width: 14px;
@@ -84,82 +90,79 @@ color:#939393;
   border-radius: 100px;
 }
 
-.before-l::after{
+.before-l::after {
   position: absolute;
   display: block;
   top: 15px;
-  left:9px;
+  left: 9px;
   height: 80%;
-  border:1px dashed #1CE2D9;
+  border: 1px dashed #1ce2d9;
   content: "";
 }
 
-.parallax{
-  position:fixed;
+.parallax {
+  position: fixed;
   width: 100%;
-  height:100%;
-  z-index:0;
+  height: 100%;
+  z-index: 0;
   // background: #0EF3D8;
 }
 
 .parallax-move {
-  background-color: rgba(0,0,0);
-  opacity:0.9
+  background-color: rgba(0, 0, 0);
+  opacity: 0.9;
 }
 
-@media only screen and (min-width:767px) {
-.experience-order-reverse{
-  flex-direction: row-reverse;
-  
+@media only screen and (min-width: 767px) {
+  .experience-order-reverse {
+    flex-direction: row-reverse;
+  }
+  .experience-order {
+    flex-direction: row;
+  }
 }
-.experience-order{
-  flex-direction: row;
-}
-}
-@media only screen and (max-width:768px) {
+@media only screen and (max-width: 768px) {
   // .slick-slide img {
   //   display: none;
   // }
   .faq-img img {
-    display:none;
+    display: none;
   }
 }
-@media only screen and (max-width:768px) {
-  .faq-card-line::before{
-    content:"";
-    border:1px solid #434343;
+@media only screen and (max-width: 768px) {
+  .faq-card-line::before {
+    content: "";
+    border: 1px solid #434343;
     position: absolute;
     display: block;
-    top:133px;
-    left:0;
+    top: 133px;
+    left: 0;
     width: 90%;
-    height:1px;
+    height: 1px;
   }
 }
-.menu-click{
-  transform:translateX(0) ;
+.menu-click {
+  transform: translateX(0);
 }
-.faq-title{
+.faq-title {
   font-size: 1.8rem;
   line-height: 2.88rem;
-  color:#1CE2D9;
+  color: #1ce2d9;
 }
-@media only screen and (min-width:768px) {
-  .faq-title{
+@media only screen and (min-width: 768px) {
+  .faq-title {
     font-size: 2.3rem;
     line-height: 3.68rem;
   }
 }
 
-@media only screen and (min-width:1536px) {
-  .faq-title{
+@media only screen and (min-width: 1536px) {
+  .faq-title {
     font-size: 3rem;
     line-height: 4.8rem;
   }
 }
 .bg-mountain {
-  
-
   animation: 1s ease slidein;
 }
 .bg-big-thunder {
@@ -167,32 +170,27 @@ color:#939393;
 }
 .main-right-thunder {
   transform: scale(1) translate(1500px, -1000px);
-  animation: thunderRightIn .8s ease-in-out forwards;
+  animation: thunderRightIn 0.8s ease-in-out forwards;
 }
 .main-left-thunder {
   transform: scale(1) translate(-1500px, -1000px);
-  animation: thunderLeftIn .8s ease-in-out forwards;
-  
+  animation: thunderLeftIn 0.8s ease-in-out forwards;
 }
 
 .main-left-thunder.bounce {
-  
-  animation:  bounce 4s ease infinite ;
+  animation: bounce 4s ease infinite;
 }
 
 .bg-arch {
-  
-  animation: archIn .8s ease-in-out forwards;
+  animation: archIn 0.8s ease-in-out forwards;
 }
 .main-cont {
-  
-  
   margin-top: 100%;
   transform-origin: 50% 50%;
   animation: mainContIn 1s ease forwards;
-  
 }
-html, body {
+html,
+body {
   overflow: hidden;
   overflow-y: auto;
 }
@@ -206,7 +204,6 @@ html, body {
   to {
     margin-top: 0%;
     transform: scale(1);
-    
   }
 }
 @keyframes slidein {
@@ -249,22 +246,20 @@ html, body {
 
 @keyframes archIn {
   from {
-    transform: scale(.5) translateY(700px);
+    transform: scale(0.5) translateY(700px);
   }
 
   to {
     transform: scale(1) translateY(0px);
   }
 }
-.bounce { 
-  
+.bounce {
   /* 파폭 */
   -moz-animation: bounce 0.5s infinite linear;
   /* 크롬 */
   -webkit-animation: bounce 0.5s infinite linear;
   -o-animation: bounce 0.5s infinite linear;
   animation: bounce 0.5s infinite linear;
-  
 }
 @keyframes bounce {
   0% {
@@ -285,4 +280,14 @@ html, body {
   100% {
     transform: scale(1) translate(0, 0);
   }
+}
+
+.experience-card {
+  opacity: 0;
+  transform: translateY(200px);
+  transition: all 1s;
+}
+.experience-card.active {
+  opacity: 1;
+  transform: translateY(0px);
 }

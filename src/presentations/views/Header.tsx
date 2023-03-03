@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import menuListData from "../../data/HeaderMenuListData.json";
 import HeaderMenuList from "../components/HeaerMenuList";
 
-export default function Header() {
+export default function Header({ activeIndex }: any) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   // const [selectLang, setSelectLang] = useState(0);
@@ -50,6 +50,8 @@ export default function Header() {
                   <HeaderMenuList
                     data={item}
                     key={index.toString()}
+                    index={index}
+                    activeIndex={activeIndex}
                     menuOpen={handleMenuOpen}
                   />
                 ))
