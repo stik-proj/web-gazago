@@ -20,7 +20,6 @@ export default function Roadmap({ screen }: any) {
     for (let i = 0; i < cnt; i++) {
       newArr.push(oldArr.splice(0, n));
     }
-    console.log(newArr);
     setRoadmapListData(newArr);
   };
   return (

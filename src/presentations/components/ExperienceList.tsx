@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 
 export default function ExperienceList({ data, index }: any) {
-  const [list, setList] = useState(null);
-  useEffect(() => {
-    const newLine = data.desc.replace(/(?:\r\n|\r|\n)/g, "<br>");
-    setList(newLine);
-  }, []);
+  // const [list, setList] = useState(null);
+  // useEffect(() => {
+  //   const newLine = data.desc.replace(/(?:\r\n|\r|\n)/g, "<br>");
+  //   setList(newLine);
+  // }, []);
   return (
     <li
       className={`mt-[9rem] flex flex-col items-center md:mx-[auto] md:justify-around md:max-w-[700px]

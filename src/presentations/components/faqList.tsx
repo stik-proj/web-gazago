@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 
 export default function FaqList({ data }: any) {
-  const parser = new DOMParser();
-  useEffect(() => {
-    const re = parser.parseFromString(data.title, "text/html");
-  });
+  // const parser = new DOMParser();
+  // useEffect(() => {
+  //   const re = parser.parseFromString(data.title, "text/html");
+  // });
   return (
     <div className=" md:flex md:justify-center md:ml-[3rem] 2xl:ml-[3.6rem]">
       <li>

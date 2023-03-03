@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 export default function RoadmapListItem({ data, index }: any) {
   const descList = (item: any) => {
     const desc1: any = [];
