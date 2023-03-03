@@ -90,7 +90,7 @@ export default function Header() {
                   <a
                     onClick={() => handleLangClick(index)}
                     className={`text-[1.3rem] font-[500] text-[#999999] xl:text-[1.4rem] ${
-                      currentIdx == index
+                      currentIdx === index
                         ? "font-bold underline text-black"
                         : ""
                     }`}

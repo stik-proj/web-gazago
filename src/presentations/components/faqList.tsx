@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 export default function FaqList({ data }: any) {
   // const parser = new DOMParser();
   // useEffect(() => {

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect } from "react";
 import Header from "./Header";
 import Home from "./Home";
 import Mission from "./Mission";
@@ -8,7 +8,6 @@ import Community from "./Community";
 import Faq from "./Faq";
 import Launcher from "./Launcher";
 import Footer from "./Footer";
-import { useInView } from "react-intersection-observer";
 
 export default function Main() {
   // const [screenSize, setScreenSize] = useState(0 as number);

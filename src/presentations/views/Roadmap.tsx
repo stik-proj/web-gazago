@@ -9,6 +9,7 @@ export default function Roadmap({ screen }: any) {
       arrayReDivide(listData.data, 2);
     }
     setInnerScreen(screen);
+    console.log(innerScreen);
   }, []);
 
   const arrayReDivide = (arr: any, n: any) => {

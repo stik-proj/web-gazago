@@ -11,6 +11,7 @@ export default function Mission({ screen }: any) {
     if (listData) {
       setMissionListData(listData.data);
       setScreenSize(screen);
+      console.log(screenSize);
     }
   }, [screen]);
   const slickSettiong = {

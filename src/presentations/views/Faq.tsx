@@ -56,9 +56,9 @@ export default function Faq() {
               : null}
           </Slider>
         </ul>
-        {/* <p>
+        <p>
           {activeSlide}/{dataLength}
-        </p> */}
+        </p>
       </div>
     </section>
   );

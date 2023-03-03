@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 export default function ExperienceList({ data, index }: any) {
   // const [list, setList] = useState(null);
   // useEffect(() => {

@@ -1,4 +1,4 @@
-import { forwardRef, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import listData from "../../data/experienceListData.json";
 import itemListData from "../../data/experienceItemListData.json";
 import ExperienceList from "../components/ExperienceList";
