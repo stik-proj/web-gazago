@@ -11,24 +11,22 @@ import Footer from "./Footer";
 import { useInView } from "react-intersection-observer";
 
 export default function Main() {
-  const [screenSize, setScreenSize] = useState(0 as number);
-  const { ref, inView, entry } = useInView({
-    threshold: 0,
-  });
+  // const [screenSize, setScreenSize] = useState(0 as number);
+  // const { ref, inView, entry } = useInView({
+  //   threshold: 0,
+  // });
 
-  const handleResize = () => {
-    setScreenSize(window.innerWidth);
-  };
+  // const handleResize = () => {
+  //   setScreenSize(window.innerWidth);
+  // };
 
-  const [height, setHeight] = useState(0);
+  // useEffect(() => {
+  //   window.addEventListener("resize", handleResize);
 
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
 
   return (
     <>
@@ -39,7 +37,7 @@ export default function Main() {
             <Home />
             <Mission screen={window.innerWidth} />
           </div>
-          <Experience ref={ref} />
+          <Experience />
           <Roadmap screen={window.innerWidth} />
           <Community />
           <Faq />
