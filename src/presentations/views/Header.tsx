@@ -5,7 +5,7 @@ import HeaderMenuList from "../components/HeaerMenuList";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
-  const [selectLang, setSelectLang] = useState(0);
+  // const [selectLang, setSelectLang] = useState(0);
   const [currentIdx, setCurrentIdx] = useState(0);
   const language = ["Korean", "English"];
   const [headerMenuListData, setHeaderMenuListData] = useState<any>(null);
@@ -27,7 +27,7 @@ export default function Header() {
     setLangOpen(!langOpen);
   };
   return (
-    <header className="fixed w-full left-0 top-0 z-50  xl:mx-auto xl:flex xl:justify-center">
+    <header className="fixed top-0 left-0 z-50 w-full xl:mx-auto xl:flex xl:justify-center">
       <div className="flex items-center justify-between px-[2.5rem] my-[2rem] xl:w-[1250px]">
         <h1>
           <a href="/">
