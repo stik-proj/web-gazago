@@ -5,7 +5,7 @@ import router from "./constants/routes";
 import reportWebVitals from "./reportWebVitals";
 import "src/presentations/styles/global.scss";
 import "src/presentations/styles/slick-dots.scss";
-
+import "./locales/index";
 const root = ReactDOM.createRoot(document.getElementById(
   "root"
 ) as HTMLElement);

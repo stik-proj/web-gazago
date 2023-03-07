@@ -12,19 +12,17 @@ const getTranslationJson = async () => {
       const resKey = Object.keys(originData).map((item) => item);
 
       resKey.forEach((item) => {
-        fs.unlink(
-          path.resolve(__dirname + "/public/locales/" + item + "/common.json"),
-          (err) => {
-            console.log("삭제");
-          },
-          fs.writeFileSync(
-            path.resolve(
-              __dirname + "/public/locales/" + item,
-              "./common.json"
-            ),
-            JSON.stringify(res.data[item]),
-            "utf8"
-          )
+        console.log(__dirname + "/src/locales/" + item + "/common.json");
+        // fs.unlink(
+        //   path.resolve(__dirname + "/src/locales/" + item + "/common.json"),
+        //   (err) => {
+        //     console.log("삭제");
+        //   }
+        // );
+        fs.writeFileSync(
+          path.resolve(__dirname + "/src/locales/" + item, "./common.json"),
+          JSON.stringify(res.data[item]),
+          "utf8"
         );
       });
       console.log(resKey);

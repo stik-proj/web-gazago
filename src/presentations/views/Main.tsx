@@ -9,8 +9,9 @@ import Faq from "./Faq";
 import Launcher from "./Launcher";
 import Footer from "./Footer";
 import { useInView, InView } from "react-intersection-observer";
+import axios from "axios";
 
-export default function Main() {
+const Main = () => {
   // const [screenSize, setScreenSize] = useState(0 as number);
   const [activeSectionIndex, setActiveSectionIndex] = useState<any>(null);
   const [missionCheck, setMissionCheck] = useState<boolean>(false);
@@ -127,4 +128,6 @@ export default function Main() {
       </div>
     </>
   );
-}
+};
+
+export default Main;

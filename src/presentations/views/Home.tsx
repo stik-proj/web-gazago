@@ -1,12 +1,9 @@
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+
 export default function Home() {
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     const el: any = document.querySelectorAll(".thunder");
-  //     el.map((item: any) => {
-  //       item.classList.add("bounce");
-  //     });
-  //   }, 2000);
-  // }, []);
+  const { t, i18next }: any = useTranslation();
+
   return (
     <section id="Home" className=" h-full">
       <div className="overflow-hidden home-background parallax w-full ">
@@ -18,7 +15,7 @@ export default function Home() {
               alt=""
             />
             <p className="text-[1.8rem] font-extrabold mt-[1rem] text-black md:text-[2.4rem] xl:text-[3.2rem]">
-              돈이 되는 챌린지 시즌1
+              {t(`chat.a`)}
             </p>
             <div className="md:flex md:mt-[4.2rem] xl:mt-[5rem]">
               <a
