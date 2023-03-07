@@ -38,7 +38,8 @@
     "build:stage": "env-cmd -f .env.development craco build",
     "build": "craco build",
     "test": "craco test",
-    "eject": "craco eject"
+    "eject": "craco eject",
+    "translation": "node translation.js"
   },
   "eslintConfig": {
     "extends": [
