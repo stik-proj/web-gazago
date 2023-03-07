@@ -1,11 +1,19 @@
 import { useEffect, useState } from "react";
-import { InView } from "react-intersection-observer";
-export default function ExperienceList({ data, activeIndex, index }: any) {
-  // const [list, setList] = useState(null);
+import { InView, useInView } from "react-intersection-observer";
+export default function ExperienceList({
+  data,
+  activeIndex,
+  index,
+  current,
+}: any) {
+  // const [ref, inView] = useInView();
   const [activeSectionIndex, setActiveSectionIndex] = useState<any>(null);
+  const [currentSection, setCurrentSection] = useState<boolean>(false);
   useEffect(() => {
-    console.log(activeIndex);
-  }, [activeIndex]);
+    if (!current) {
+      setActiveSectionIndex(9999);
+    }
+  }, [current]);
   return (
     <InView
       as="div"
@@ -14,6 +22,7 @@ export default function ExperienceList({ data, activeIndex, index }: any) {
         // console.log("Inview:", index, inView);
         if (inView) {
           setActiveSectionIndex(index);
+          setCurrentSection(inView);
         }
       }}
       threshold={0.6}
@@ -22,7 +31,7 @@ export default function ExperienceList({ data, activeIndex, index }: any) {
         className={`mt-[9rem] flex flex-col items-center md:mx-[auto] md:justify-around md:max-w-[700px]
       xl:max-w-[1424px] first:xl:mt-[12rem] xl:mt-[26rem] experience-card
       ${index % 2 ? "experience-order-reverse" : "experience-order"} ${
-          activeSectionIndex === index ? "active" : ""
+          activeSectionIndex === index && current ? "active" : ""
         }`}
       >
         <img

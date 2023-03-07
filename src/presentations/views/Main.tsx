@@ -13,9 +13,17 @@ import { useInView, InView } from "react-intersection-observer";
 export default function Main() {
   // const [screenSize, setScreenSize] = useState(0 as number);
   const [activeSectionIndex, setActiveSectionIndex] = useState<any>(null);
+  const [missionCheck, setMissionCheck] = useState<boolean>(false);
+  const [experienceCheck, setExperienceCheck] = useState<boolean>(false);
+  const [communityCheck, setCommunityCheck] = useState<boolean>(false);
+  const [faqCheck, setFaqCheck] = useState<boolean>(false);
+  const [screenSize, setScreenSize] = useState(window.innerWidth as number);
+  // const { ref, inView, entry } = useInView({
+  //   threshold: 0,
+  // });
 
   const handleResize = () => {
-    // setScreenSize(window.innerWidth);
+    setScreenSize(window.innerWidth);
   };
   useEffect(() => {
     window.addEventListener("resize", handleResize);
@@ -41,25 +49,34 @@ export default function Main() {
                 // console.log("Inview:", index, inView);
                 if (inView) {
                   setActiveSectionIndex(0);
+                  setMissionCheck(inView);
+                } else {
+                  setMissionCheck(false);
                 }
               }}
-              threshold={0.6}
+              threshold={0.2}
             >
-              <Mission screen={window.innerWidth} />
+              <Mission
+                screen={screenSize ? screenSize : 0}
+                current={missionCheck}
+              />
             </InView>
             <InView
               as="div"
               onChange={(inView, entry) => {
-                console.log("Inview:", inView);
+                // console.log("Inview:", inView);
                 if (inView) {
                   setActiveSectionIndex(1);
+                  setExperienceCheck(inView);
+                  console.log(experienceCheck);
+                } else {
+                  setExperienceCheck(false);
                 }
               }}
-              threshold={0.6}
+              threshold={0.0}
             >
-              <div />
+              <Experience current={experienceCheck} />
             </InView>
-            <Experience />
 
             <InView
               as="div"
@@ -71,19 +88,22 @@ export default function Main() {
               }}
               threshold={0.6}
             >
-              <Roadmap screen={window.innerWidth} />
+              <Roadmap screen={screenSize ? screenSize : 0} />
             </InView>
             <InView
               as="div"
               onChange={(inView, entry) => {
-                // console.log("Inview:", index, inView);
+                // console.log("Inview:", entry, inView);
                 if (inView) {
                   setActiveSectionIndex(3);
+                  setCommunityCheck(inView);
+                } else {
+                  setCommunityCheck(false);
                 }
               }}
-              threshold={0.6}
+              threshold={0.2}
             >
-              <Community />
+              <Community current={communityCheck} />
             </InView>
             <InView
               as="div"
@@ -91,6 +111,9 @@ export default function Main() {
                 // console.log("Inview:", index, inView);
                 if (inView) {
                   setActiveSectionIndex(4);
+                  setFaqCheck(inView);
+                } else {
+                  setFaqCheck(false);
                 }
               }}
               threshold={0.6}

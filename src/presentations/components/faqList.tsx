@@ -27,7 +27,7 @@ export default function FaqList({ data }: any) {
               />
             </p>
             <img
-              className=" md:w-[200px] 2xl:w-[385px] 2xl:absolute 2xl:right-[2rem] 2xl:top-[0] "
+              className=" md:w-[200px] 2xl:w-[385px] 2xl:absolute 2xl:right-[2rem] 2xl:top-[0] faq-list"
               src={data.image}
               alt=""
             />

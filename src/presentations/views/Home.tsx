@@ -8,10 +8,10 @@ export default function Home() {
   //   }, 2000);
   // }, []);
   return (
-    <section id="Home" className="">
-      <div className="overflow-hidden home-background parallax">
+    <section id="Home" className=" h-full">
+      <div className="overflow-hidden home-background parallax w-full ">
         <div className="relative z-30 flex flex-col items-center justify-center h-screen ">
-          <div className="flex flex-col items-center justify-center main-cont">
+          <div className="z-30 flex flex-col items-center justify-center main-cont">
             <img
               className="w-[239px] md:w-[362px] xl:w-[568px] xl:mt-[10rem]"
               src="img/home/img_home_logo.svg"
@@ -45,100 +45,132 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <img
-            className="absolute pr-[70%] top-[10rem] mobile md:hidden"
-            src="img/home/img_home_bg_shape_top_left-L_m.svg"
-            alt=""
-          />
-          <img
-            className="absolute pr-[50%] top-[10rem] md:hidden"
-            src="img/home/img_home_bg_shape_top_left-S_m.svg"
-            alt=""
-          />
-          <img
-            className="absolute pl-[65%] top-[10rem] md:hidden"
-            src="img/home/img_home_bg_shape_top_right-L_m.svg"
-            alt=""
-          />
-          <img
-            className="absolute pl-[50%] top-[10rem] md:hidden"
-            src="img/home/img_home_bg_shape_top_right-S_m.svg"
-            alt=""
-          />
-          <img
-            className="absolute pr-[60%] top-[14rem] hidden md:block xl:hidden"
-            src="img/home/img_home_bg_shape_top_left-L_t.svg"
-            alt=""
-          />
-          <img
-            className="absolute pr-[55%] top-[12rem] hidden md:block xl:hidden"
-            src="img/home/img_home_bg_shape_top_left-S_t.svg"
-            alt=""
-          />
-          <img
-            className="absolute pl-[70%] top-[20rem] hidden md:block xl:hidden"
-            src="img/home/img_home_bg_shape_top_right-L_t.svg"
-            alt=""
-          />
-          <img
-            className="absolute pl-[55%] top-[13rem] hidden md:block xl:hidden"
-            src="img/home/img_home_bg_shape_top_right-S_t.svg"
-            alt=""
-          />
-          <img
-            className="absolute pr-[70%] top-[30%] hidden md:block xl:hidden"
-            src="img/home/img_home_bg_shape_left-L_t.svg"
-            alt=""
-          />
-          <img
-            className="absolute pl-[75%] top-[18rem] hidden md:block xl:hidden"
-            src="img/home/img_home_bg_shape_right-L_t.svg"
-            alt=""
-          />
-          <img
-            className="absolute pr-[45%] top-[15%] hidden xl:block main-left-thunder thunder"
-            src="img/home/img_home_bg_shape_top_left-L_w.svg"
-            alt=""
-          />
-          <img
-            className="absolute pr-[36%] top-[15%] hidden xl:block main-left-thunder thunder "
-            src="img/home/img_home_bg_shape_top_left-S_w.svg"
-            alt=""
-          />
-          <img
-            className="absolute pl-[60%] top-[17%] hidden xl:block main-right-thunder thunder"
-            src="img/home/img_home_bg_shape_top_right-L_w.svg"
-            alt=""
-          />
-          <img
-            className="absolute pl-[40%] top-[15%] hidden xl:block main-right-thunder thunder"
-            src="img/home/img_home_bg_shape_top_right-S_w.svg"
-            alt=""
-          />
-          <img
-            className="absolute pr-[60%] top-[25%] hidden xl:block main-left-thunder thunder "
-            src="img/home/img_home_bg_shape_left-L_w.svg"
-            alt=""
-          />
-          <img
-            className="absolute pl-[60%] top-[18rem] hidden xl:block main-right-thunder thunder"
-            src="img/home/img_home_bg_shape_right-L_w.svg"
-            alt=""
-          />
+          <div className="absolute pr-[70%] top-[10rem] md:hidden main-left-thunder">
+            <img
+              className="bounce-thunder-left-m-L"
+              src="img/home/img_home_bg_shape_top_left-L_m.svg"
+              alt=""
+            />
+          </div>
+          <div className="absolute pr-[50%] top-[10rem] md:hidden main-left-thunder-m">
+            <img
+              className="bounce-thunder-left-m-S"
+              src="img/home/img_home_bg_shape_top_left-S_m.svg"
+              alt=""
+            />
+          </div>
+          <div className="absolute pl-[65%] top-[10rem] md:hidden main-right-thunder">
+            <img
+              className="bounce-thunder-right-m-L"
+              src="img/home/img_home_bg_shape_top_right-L_m.svg"
+              alt=""
+            />
+          </div>
+          <div className="absolute pl-[50%] top-[10rem] md:hidden main-right-thunder-m">
+            <img
+              className="bounce-thunder-right-m-S"
+              src="img/home/img_home_bg_shape_top_right-S_m.svg"
+              alt=""
+            />
+          </div>
+          <div className="absolute pr-[60%] pb-[30%]  hidden md:block xl:hidden main-left-thunder-m">
+            <img
+              className="bounce-thunder-left-L"
+              src="img/home/img_home_bg_shape_top_left-L_t.svg"
+              alt=""
+            />
+          </div>
+          <div className="absolute pr-[55%] pb-[40%] hidden md:block xl:hidden main-left-thunder-s">
+            <img
+              className="bounce-thunder-left-S"
+              src="img/home/img_home_bg_shape_top_left-S_t.svg"
+              alt=""
+            />
+          </div>
+          <div className="absolute pl-[70%] pb-[21%]  hidden md:block xl:hidden main-right-thunder-m">
+            <img
+              className="bounce-thunder-right-L"
+              src="img/home/img_home_bg_shape_top_right-L_t.svg"
+              alt=""
+            />
+          </div>
+          <div className="absolute pl-[55%] pb-[40%]  hidden md:block xl:hidden main-right-thunder-s">
+            <img
+              className="bounce-thunder-right-S"
+              src="img/home/img_home_bg_shape_top_right-S_t.svg"
+              alt=""
+            />
+          </div>
+          <div className="absolute pr-[70%] pb-[15%] hidden md:block xl:hidden main-left-thunder">
+            <img
+              className="bounce-thunder-left-big"
+              src="img/home/img_home_bg_shape_left-L_t.svg"
+              alt=""
+            />
+          </div>
+          <div className="absolute pl-[75%] pb-[20%] hidden md:block xl:hidden main-right-thunder">
+            <img
+              className="bounce-thunder-right-big"
+              src="img/home/img_home_bg_shape_right-L_t.svg"
+              alt=""
+            />
+          </div>
+          <div className="absolute pr-[45%] pb-[25%] hidden xl:block main-left-thunder-m thunder">
+            <img
+              className="bounce-thunder-left-L"
+              src="img/home/img_home_bg_shape_top_left-L_w.svg"
+              alt=""
+            />
+          </div>
+          <div className="absolute pr-[36%] pb-[28%] hidden xl:block main-left-thunder-s thunder">
+            <img
+              className="bounce-thunder-left-S"
+              src="img/home/img_home_bg_shape_top_left-S_w.svg"
+              alt=""
+            />
+          </div>
+          <div className="absolute pl-[60%] pb-[23%] hidden xl:block main-right-thunder-m thunder">
+            <img
+              className="bounce-thunder-right-L"
+              src="img/home/img_home_bg_shape_top_right-L_w.svg"
+              alt=""
+            />
+          </div>
+          <div className="absolute pl-[40%] pb-[30%] hidden xl:block main-right-thunder-s thunder">
+            <img
+              className="bounce-thunder-right-S"
+              src="img/home/img_home_bg_shape_top_right-S_w.svg"
+              alt=""
+            />
+          </div>
+          <div className="absolute pr-[60%] pb-[16%] hidden xl:block main-left-thunder thunder">
+            <img
+              className="bounce-thunder-left-big"
+              src="img/home/img_home_bg_shape_left-L_w.svg"
+              alt=""
+            />
+          </div>
+          <div className="absolute pl-[60%] pb-[17%] hidden xl:block main-right-thunder thunder">
+            <img
+              className="bounce-thunder-right-big"
+              src="img/home/img_home_bg_shape_right-L_w.svg"
+              alt=""
+            />
+          </div>
         </div>
         <div className="md:hidden ">
           <img
-            className="absolute bottom-0 left-0 z-10 w-full "
+            className="absolute bottom-0 left-0 z-10 w-full bg-mountain"
             src="img/home/img_home_mountain_L_m.png "
             alt=""
           />
           <img
-            className="absolute bottom-0 left-0 z-10 w-full"
+            className="absolute bottom-0 left-0 z-10 w-full bg-mountain"
             src="img/home/img_home_mountain_S_m.png"
             alt=""
           />
           <img
-            className="absolute bottom-0 left-0 w-full"
+            className="absolute bottom-0 left-0 w-full bg-big-thunder"
             src="img/home/img_home_bg_shape_bottom_m.png"
             alt=""
           />
@@ -150,7 +182,7 @@ export default function Home() {
         </div>
         <div className="hidden overflow-hidden md:block xl:hidden">
           <img
-            className="absolute bottom-0 left-0 w-full bg-arch"
+            className="absolute bottom-0 left-0 bg-arch w-full"
             src="img/home/img_home_bg_shape_arch_t.png"
             alt=""
           />
@@ -183,11 +215,14 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className=" h-[200vh]">
-        <div className="h-screen" />
-        <div className="flex flex-col items-center justify-center h-screen overflow-hidden text-center bg-black/70 parallax-move">
+      <div className=" h-[200vh] snap-scroll">
+        <div className="h-screen snap-item" />
+        <div
+          id="Mission"
+          className="relative flex flex-col items-center justify-center h-screen overflow-hidden text-center bg-black/90 snap-item"
+        >
           <p className="section-title">Mission</p>
-          <p className=" font-bold text-[1.8rem] max-w-[240px] mt-[3.4rem] md:max-w-[567px] md:text-[2.6rem] xl:max-w-[751px] xl:text-[3.6rem] xl:leading-[5.4rem] xl:mt-[7.2rem]">
+          <p className=" font-bold text-[1.8rem] max-w-[240px] mt-[3.4rem] md:max-w-[567px] md:text-[2.6rem] xl:max-w-[751px] xl:text-[3.6rem] xl:leading-[5.4rem] xl:mt-[7.2rem] ">
             <span className="block font-bold text-[1.8rem] md:text-[2.6rem] xl:max-w-[751px] xl:text-[3.6rem] xl:leading-[5.4rem]">
               블록체인 기술로 더 많은 사람들이 새로운 금융 시장과
             </span>

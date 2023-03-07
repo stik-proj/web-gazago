@@ -1,7 +1,7 @@
 export default function Launcher() {
   return (
     <div className="flex flex-col items-center justify-center h-screen launcher-bg ">
-      <div className=" w-[80px] launcher-logo lg:w-[101px]">
+      <div className=" w-[80px] launcher-logo lg:w-[101px] launcher-bounce">
         <img src="img/launcher/img_launcher_logo.svg" alt="" />
       </div>
       <p className="font-[900] text-[2.5rem] leading-[3.5rem] text-center mt-[4rem] lg:text-[5rem] lg:leading-[7rem]">
@@ -14,7 +14,11 @@ export default function Launcher() {
         가자고 - 돈이 되는 챌린지 시즌 1
       </p>
       <div className="flex flex-col  mt-[4rem] justify-between md:flex-row md:w-[272px] lg:w-[362px] lg:mt-[6rem]">
-        <a href="https://gazago.page.link/gazaGO_home" rel="noopener">
+        <a
+          href="https://gazago.page.link/gazaGO_home"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <img
             className="w-[132px] lg:w-[173px]"
             src="img/launcher/img_launcher_apple_btn.png"

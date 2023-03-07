@@ -18,7 +18,17 @@
 .home-background {
   background: linear-gradient(137.04deg, #0ee6f3 19.9%, #0ef3d8 80.33%);
 }
+.parallax {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
 
+.parallax-move {
+  background-color: rgba(0, 0, 0);
+
+}
 .section-title {
   font-family: "Montserrat";
   font-size: 36px;
@@ -100,18 +110,7 @@
   content: "";
 }
 
-.parallax {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  // background: #0EF3D8;
-}
 
-.parallax-move {
-  background-color: rgba(0, 0, 0);
-  opacity: 0.9;
-}
 
 @media only screen and (min-width: 767px) {
   .experience-order-reverse {
@@ -149,6 +148,23 @@
   line-height: 2.88rem;
   color: #1ce2d9;
 }
+
+@media only screen and (max-width: 1279px) {
+  .menu p::after{
+    content:"";
+    position: absolute;
+    left:0;
+    bottom:0;
+    display: inline-block;
+    width: 0;
+    height:2px;
+    background-color: #1CE2D9;
+    transition: 1s all;
+  }
+  .menu .active p::after{
+    width: 100%;
+  }
+}
 @media only screen and (min-width: 768px) {
   .faq-title {
     font-size: 2.3rem;
@@ -170,17 +186,79 @@
 }
 .main-right-thunder {
   transform: scale(1) translate(1500px, -1000px);
-  animation: thunderRightIn 0.8s ease-in-out forwards;
+  animation: thunderRightIn .8s ease-in-out forwards;
+  animation-delay: 0.2s;
+
 }
 .main-left-thunder {
   transform: scale(1) translate(-1500px, -1000px);
-  animation: thunderLeftIn 0.8s ease-in-out forwards;
+  animation: thunderLeftIn .8s ease-in-out forwards;
+}
+.main-right-thunder-m {
+  transform: scale(1) translate(1500px, -1000px);
+  animation: thunderRightIn .8s ease-in-out forwards;
+  animation-delay: 0.4s;
+
+}
+.main-left-thunder-m {
+  transform: scale(1) translate(-1500px, -1000px);
+  animation: thunderLeftIn .8s ease-in-out forwards;
+  animation-delay: 0.6s;
+
+  
+}
+.main-right-thunder-s {
+  transform: scale(1) translate(1500px, -1000px);
+  animation: thunderRightIn .8s ease-in-out forwards;
+  animation-delay: 1s;
+}
+.main-left-thunder-s {
+  transform: scale(1) translate(-1500px, -1000px);
+  animation: thunderLeftIn .8s ease-in-out forwards;
+  animation-delay: 0.8s;
 }
 
-.main-left-thunder.bounce {
-  animation: bounce 4s ease infinite;
+.bounce-thunder-right-big {
+  animation:  bounceRight 8s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+.bounce-thunder-left-big {
+  animation:  bounceLeft 5.5s ease-in-out infinite;
+  animation-delay: 1s;
+}
+.bounce-thunder-right-L {
+  animation:  bounceRight 8s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+.bounce-thunder-left-L {
+  animation:  bounceLeft 8s ease-in-out infinite;
+  animation-delay: 1.7s;
+}
+.bounce-thunder-right-S {
+  animation:  bounceRight 6s ease-in-out infinite;
+  animation-delay: 1.8s;
+}
+.bounce-thunder-left-S {
+  animation:  bounceLeft 5s ease-in-out infinite;
+  animation-delay: 2.5s;
 }
 
+.bounce-thunder-right-m-L {
+  animation:  bounceLeftMobile 6s ease-in-out infinite;
+  animation-delay: 3s;
+}
+.bounce-thunder-left-m-L {
+  animation:  bounceRightMobile 8s ease-in-out infinite;
+  animation-delay: 1.7s;
+}
+.bounce-thunder-right-m-S {
+  animation:  bounceLeftMobile 6s ease-in-out infinite;
+  animation-delay: 1.8s;
+}
+.bounce-thunder-left-m-S {
+  animation:  bounceRightMobile 5s ease-in-out infinite;
+  animation-delay: 2.5s;
+}
 .bg-arch {
   animation: archIn 0.8s ease-in-out forwards;
 }
@@ -198,12 +276,12 @@ body {
 @keyframes mainContIn {
   from {
     margin-top: 70%;
-    transform: scale(0.1);
+    transform: translateY(200px);
   }
 
   to {
     margin-top: 0%;
-    transform: scale(1);
+    transform: translateY(0px);
   }
 }
 @keyframes slidein {
@@ -261,33 +339,189 @@ body {
   -o-animation: bounce 0.5s infinite linear;
   animation: bounce 0.5s infinite linear;
 }
-@keyframes bounce {
+@keyframes bounceRight{
   0% {
     transform: scale(1) translate(0, 0);
   }
 
   40% {
-    transform: scale(1) translate(-50px, -50px);
+    transform: scale(1) translate(0, -30px);
   }
 
   60% {
-    transform: scale(1) translate(0, 0);
+    transform: scale(1) translate(0, -15px);
   }
 
   80% {
-    transform: scale(1) translate(-50px, -50px);
+    transform: scale(1) translate(0, -30px);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+@keyframes bounceLeft{
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+
+  40% {
+    transform: scale(1) translate(0, 30px);
+  }
+
+  60% {
+    transform: scale(1) translate(0, 15px);
+  }
+
+  80% {
+    transform: scale(1) translate(0, 30px);
   }
   100% {
     transform: scale(1) translate(0, 0);
   }
 }
 
-.experience-card {
+@keyframes bounceRightMobile{
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+
+  40% {
+    transform: scale(1) translate(0, -10px);
+  }
+
+  60% {
+    transform: scale(1) translate(0, -0px);
+  }
+
+  80% {
+    transform: scale(1) translate(0, 10px);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+@keyframes bounceLeftMobile{
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+
+  40% {
+    transform: scale(1) translate(0, 10px);
+  }
+
+  60% {
+    transform: scale(1) translate(0, 5px);
+  }
+
+  80% {
+    transform: scale(1) translate(0, 10px);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+ .experience-card {
+  opacity: 0;
+  
+}
+.experience-list .experience-card.active {
+  opacity: 1;
+  animation: showUp 1s ease forwards;
+}
+
+.mission-card0 {
+  opacity: 0;
+}
+.mission-card0.active {
+  animation: showUp 1s ease forwards;
+}
+.mission-card1 {
+  opacity: 0;
+}
+.mission-card1.active {
+  opacity: 0;
+  animation: showUp 1s ease forwards;
+  animation-delay: 0.2s;
+}
+.mission-card2 {
+  opacity: 0;
+}
+.mission-card2.active {
+  opacity: 0;
+  animation: showUp 1s ease forwards;
+  animation-delay: 0.4s;
+}
+.mission-card3 {
+  opacity: 0;
+}
+.mission-card3.active {
+  opacity: 0;
+  animation: showUp 1s ease forwards;
+  animation-delay: 0.6s;
+}
+.community-list {
   opacity: 0;
   transform: translateY(200px);
   transition: all 1s;
 }
-.experience-card.active {
+.community-list.active {
   opacity: 1;
   transform: translateY(0px);
+}
+
+@keyframes showUp {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 1s;
+  }
+}
+
+
+.slick-slide .faq-list{
+  opacity: 0;
+}
+.faq-list .slick-slide.slick-active .faq-list{
+  opacity: 1;
+  animation: 1s ease showUp forwards;
+}
+.launcher-bounce{
+  animation: ease-in-out 4s launcherBounce infinite;
+}
+
+@keyframes launcherBounce{
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+
+  40% {
+    transform: scale(1) translate(0, 15px);
+  }
+
+  60% {
+    transform: scale(1) translate(0, 0px);
+  }
+
+  80% {
+    transform: scale(1) translate(0, 15px);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+.snap-scroll{
+  scroll-snap-type:y mandatory;
+  overflow-y: scroll;
+}
+
+.snap-item{
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
 }

@@ -44,7 +44,7 @@ export default function Header({ activeIndex }: any) {
             menuOpen ? "translate-x-0" : ""
           } xl:translate-x-0 xl:h-auto xl:bg-transparent xl:items-center xl:block xl:relative`}
         >
-          <ul className="flex flex-col text-center xl:flex-row xl:justify-end">
+          <ul className="flex flex-col text-center xl:flex-row xl:justify-end ">
             {headerMenuListData
               ? headerMenuListData.map((item: any, index: any) => (
                   <HeaderMenuList

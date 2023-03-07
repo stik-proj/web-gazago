@@ -7,18 +7,22 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const Experience = () => {
+const Experience = ({ current }: any) => {
   const [experienceListData, setExperienceListData] = useState<any>(null);
   const [experienceItemListData, setExperienceItemListData] = useState<any>(
     null
   );
 
   useEffect(() => {
-    if (listData.data.length > 0) {
+    if (listData) {
       setExperienceListData(listData.data);
       setExperienceItemListData(itemListData.data);
+      console.log("ex:" + current);
     }
   }, []);
+  useEffect(() => {
+    console.log(current);
+  }, [current]);
 
   const slickSettiong = {
     arrows: false,
@@ -96,13 +100,14 @@ const Experience = () => {
       className="relative text-center h-full flex-col justify-center items-center py-[10rem] md:text-start"
     >
       <p className="section-title">Experience</p>
-      <ul>
+      <ul className={`${current ? "experience-list" : ""}`}>
         {experienceListData
           ? experienceListData.map((item: any, index: any) => (
               <ExperienceList
                 data={item}
                 key={index.toString()}
                 index={index}
+                current={current}
               />
             ))
           : null}

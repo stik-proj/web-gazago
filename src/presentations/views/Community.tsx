@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import listData from "../../data/communityListData.json";
 import CommunityList from "../components/CommunityList";
 
-export default function Community() {
+export default function Community({ current }: any) {
   const [communityListData, setCommunityListData] = useState<any>();
 
   useEffect(() => {
@@ -10,13 +10,16 @@ export default function Community() {
       setCommunityListData(listData.data);
     }
   }, []);
+  useEffect(() => {
+    console.log(current);
+  }, [current]);
   return (
     <section
       id="Community"
-      className="relative h-screen flex md:justify-center items-center"
+      className="relative h-full flex flex-col md:justify-center items-center py-[10rem]"
     >
-      <div className="px-[2.5rem] relative 2xl:w-[1250px] 2xl:mx-auto">
-        <p className=" section-title !text-start md:!text-center 2xl:!text-start">
+      <div className="px-[2.5rem] relative 2xl:w-[1250px] 2xl:mx-auto z-10 ">
+        <p className=" section-title !text-start md:!text-center 2xl:!text-start md:pt-[10rem]">
           Community
         </p>
         <div className="flex flex-col items-start  md:justify-center md:items-start md:flex-row md:mt-[4rem] 2xl:justify-between 2xl:items-start">
@@ -31,10 +34,14 @@ export default function Community() {
             </p>
           </div>
           <div className="md:ml-[5rem]">
-            <ul>
+            <ul className={`community-list ${current ? "active" : ""}`}>
               {communityListData
                 ? communityListData.map((item: any, index: any) => (
-                    <CommunityList key={index.toString()} data={item} />
+                    <CommunityList
+                      key={index.toString()}
+                      data={item}
+                      index={index}
+                    />
                   ))
                 : null}
             </ul>
@@ -42,7 +49,7 @@ export default function Community() {
         </div>
       </div>
       <img
-        className="hidden absolute w-full left-0 bottom-0 md:block"
+        className="hidden  w-full left-0 bottom-0 md:block md:mt-[7rem] 2xl:mt-[22rem]"
         src="img/community/img_community_bg.png"
         alt=""
       />
