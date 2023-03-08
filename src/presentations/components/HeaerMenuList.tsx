@@ -7,7 +7,7 @@ export default function MenuList(props: any) {
   };
   return (
     <li
-      className={` overflow-hidden mt-[5rem] xl:mt-0 xl:px-[2rem] xl:py-[0.5rem] xl:bg-[#111111] xl:ml-[1rem] xl:border-[1px] xl:border-white xl:rounded-[30px] menu ${
+      className={` overflow-hidden mt-[5rem] xl:mt-0 xl:px-[2rem] xl:py-[0.5rem] xl:bg-[#111111] xl:ml-[1rem] xl:border-[1px] cursor-pointer xl:border-white xl:rounded-[30px] menu ${
         props.activeIndex === props.index ? "active" : ""
       }`}
     >
