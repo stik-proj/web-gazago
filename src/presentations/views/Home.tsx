@@ -18,7 +18,7 @@ export default function Home() {
             </p>
             <div className="md:flex md:mt-[4.2rem] xl:mt-[5rem]">
               <a
-                href="https://gazago.page.link/gazaGO_home"
+                href="https://apps.apple.com/kr/app/%EA%B0%80%EC%9E%90%EA%B3%A0-%EB%8F%88%EC%9D%B4-%EB%90%98%EB%8A%94-%EC%B1%8C%EB%A6%B0%EC%A7%80-%EC%8B%9C%EC%A6%8C-1/id1645495608"
                 target="_blank"
                 rel="noreferrer"
               >
