@@ -14,7 +14,7 @@ export default function Home() {
               alt=""
             />
             <p className="text-[1.8rem] font-extrabold mt-[1rem] text-black md:text-[2.4rem] xl:text-[3.2rem]">
-              {t(`chat.a`)}
+              돈이 되는 챌린지 시즌 1
             </p>
             <div className="md:flex md:mt-[4.2rem] xl:mt-[5rem]">
               <a
