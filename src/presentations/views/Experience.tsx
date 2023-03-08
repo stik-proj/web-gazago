@@ -19,9 +19,6 @@ const Experience = ({ current }: any) => {
       setExperienceItemListData(itemListData.data);
       console.log("ex:" + current);
     }
-  }, []);
-  useEffect(() => {
-    console.log(current);
   }, [current]);
 
   const slickSettiong = {

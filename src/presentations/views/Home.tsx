@@ -1,11 +1,11 @@
-import { useEffect, useRef } from "react";
-import { useTranslation } from "react-i18next";
+// import { useEffect, useRef } from "react";
+// import { useTranslation } from "react-i18next";
 
 export default function Home() {
-  const { t, i18next }: any = useTranslation();
+  // const { t, i18next }: any = useTranslation();
   return (
-    <section id="Home" className=" h-full ">
-      <div className="overflow-hidden home-background parallax w-full ">
+    <section id="Home" className="h-full ">
+      <div className="w-full overflow-hidden home-background parallax ">
         <div className="relative z-30 flex flex-col items-center justify-center h-screen ">
           <div className="z-30 flex flex-col items-center justify-center main-cont">
             <img
@@ -178,12 +178,12 @@ export default function Home() {
         </div>
         <div className="hidden overflow-hidden md:block xl:hidden ">
           <img
-            className="absolute bottom-0 left-0 bg-arch w-full portrait:hidden"
+            className="absolute bottom-0 left-0 w-full bg-arch portrait:hidden"
             src="img/home/img_home_bg_shape_arch_portrait_t.png"
             alt=""
           />
           <img
-            className="absolute bottom-0 left-0  w-full landscape:hidden"
+            className="absolute bottom-0 left-0 w-full landscape:hidden"
             src="img/home/img_home_bg_shape_arch_landscape_t.png"
             alt=""
           />
@@ -198,12 +198,12 @@ export default function Home() {
             alt=""
           />
           <img
-            className="absolute bottom-0 left-0 portrait:hidden w-full bg-big-thunder"
+            className="absolute bottom-0 left-0 w-full portrait:hidden bg-big-thunder"
             src="img/home/img_home_bg_shape_portrait_bottom_t.png"
             alt=""
           />
           <img
-            className="absolute bottom-0 left-0 landscape:hidden w-full bg-big-thunder"
+            className="absolute bottom-0 left-0 w-full landscape:hidden bg-big-thunder"
             src="img/home/img_home_bg_shape_landscape_bottom_t.png"
             alt=""
           />
@@ -230,7 +230,7 @@ export default function Home() {
         <div className="h-screen " />
         <div
           id="Mission"
-          className="snap-item relative flex flex-col items-center justify-center h-screen overflow-hidden text-center bg-black/90 snap-item"
+          className="relative flex flex-col items-center justify-center h-screen overflow-hidden text-center snap-item bg-black/90"
         >
           <p className="section-title">Mission</p>
           <p className=" font-bold text-[1.8rem] max-w-[240px] mt-[3.4rem] md:max-w-[567px] md:text-[2.6rem] xl:max-w-[751px] xl:text-[3.6rem] xl:leading-[5.4rem] xl:mt-[7.2rem] ">

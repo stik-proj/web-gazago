@@ -8,20 +8,15 @@ import Community from "./Community";
 import Faq from "./Faq";
 import Launcher from "./Launcher";
 import Footer from "./Footer";
-import { useInView, InView } from "react-intersection-observer";
-import axios from "axios";
+import { InView } from "react-intersection-observer";
 
 const Main = () => {
-  // const [screenSize, setScreenSize] = useState(0 as number);
   const [activeSectionIndex, setActiveSectionIndex] = useState<any>(null);
   const [missionCheck, setMissionCheck] = useState<boolean>(false);
   const [experienceCheck, setExperienceCheck] = useState<boolean>(false);
   const [communityCheck, setCommunityCheck] = useState<boolean>(false);
   const [faqCheck, setFaqCheck] = useState<boolean>(false);
   const [screenSize, setScreenSize] = useState(window.innerWidth as number);
-  // const { ref, inView, entry } = useInView({
-  //   threshold: 0,
-  // });
 
   const handleResize = () => {
     setScreenSize(window.innerWidth);

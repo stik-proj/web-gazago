@@ -1,16 +1,13 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { InView } from "react-intersection-observer";
 export default function MissionList({ data, current, index }: any) {
   const [activeSectionIndex, setActiveSectionIndex] = useState<any>(null);
-  useEffect(() => {
-    console.log(index);
-  }, []);
+
   return (
     <InView
       as="div"
       key={index}
-      onChange={(inView, entry) => {
-        // console.log("Inview:", index, inView);
+      onChange={(inView) => {
         if (inView) {
           setActiveSectionIndex(index);
         }

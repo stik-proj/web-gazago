@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
-import { InView, useInView } from "react-intersection-observer";
+import { InView } from "react-intersection-observer";
 export default function ExperienceList({
   data,
   activeIndex,
   index,
   current,
 }: any) {
-  // const [ref, inView] = useInView();
   const [activeSectionIndex, setActiveSectionIndex] = useState<any>(null);
   const [currentSection, setCurrentSection] = useState<boolean>(false);
   useEffect(() => {
