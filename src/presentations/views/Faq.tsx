@@ -41,7 +41,7 @@ export default function Faq() {
   };
   return (
     <section id="FAQ" className="h-screen px-[2.5rem] md:px-0 ">
-      <div className="relative py-[25%] md:py-[10%]">
+      <div className="h-full relative py-[25%] md:py-[10%]">
         <p className="section-title ">FAQ</p>
         <InView
           as="div"

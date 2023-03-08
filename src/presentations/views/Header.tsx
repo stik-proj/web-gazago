@@ -2,23 +2,33 @@
 import { useEffect, useState } from "react";
 import menuListData from "../../data/HeaderMenuListData.json";
 import HeaderMenuList from "../components/HeaerMenuList";
+import { useTranslation } from "react-i18next";
 
 export default function Header({ activeIndex }: any) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   // const [selectLang, setSelectLang] = useState(0);
   const [currentIdx, setCurrentIdx] = useState(0);
-  const language = ["Korean", "English"];
+  const language = ["Korean", "English", "Japan"];
   const [headerMenuListData, setHeaderMenuListData] = useState<any>(null);
-
+  const { i18n } = useTranslation();
   useEffect(() => {
     if (menuListData) {
       setHeaderMenuListData(menuListData.data);
     }
   }, []);
-  const handleLangClick = (index: number) => {
+  const handleLangClick = (index: number, item: string) => {
     setLangOpen(false);
     setCurrentIdx(index);
+    console.log(item);
+    if (item === "Korean") {
+      i18n.changeLanguage("ko");
+    } else if (item === "English") {
+      i18n.changeLanguage("en");
+    } else if (item === "Japan") {
+      i18n.changeLanguage("ja");
+    }
+
     // setCurrentIdx()
   };
   const handleMenuOpen = (value: any) => {
@@ -29,7 +39,7 @@ export default function Header({ activeIndex }: any) {
   };
   return (
     <header className="fixed top-0 left-0 z-50 w-full xl:mx-auto xl:flex xl:justify-center">
-      <div className="flex items-center justify-between px-[2.5rem] my-[2rem] xl:w-[1250px]">
+      <div className="flex items-center justify-between px-[2.5rem] my-[2rem] lg:w-[850px] lg:mx-auto xl:w-[1250px]">
         <h1>
           <a href="/">
             <img
@@ -92,7 +102,7 @@ export default function Header({ activeIndex }: any) {
                 <li className="" key={index.toString()}>
                   <a
                     href="#"
-                    onClick={() => handleLangClick(index)}
+                    onClick={() => handleLangClick(index, item)}
                     className={`text-[1.3rem] font-[500] text-[#999999] xl:text-[1.4rem] ${
                       currentIdx === index
                         ? "font-bold underline text-black"

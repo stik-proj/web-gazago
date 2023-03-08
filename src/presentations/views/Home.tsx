@@ -1,11 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
 export default function Home() {
   const { t, i18next }: any = useTranslation();
-
   return (
-    <section id="Home" className=" h-full">
+    <section id="Home" className=" h-full ">
       <div className="overflow-hidden home-background parallax w-full ">
         <div className="relative z-30 flex flex-col items-center justify-center h-screen ">
           <div className="z-30 flex flex-col items-center justify-center main-cont">
@@ -70,7 +69,7 @@ export default function Home() {
               alt=""
             />
           </div>
-          <div className="absolute pr-[60%] pb-[30%]  hidden md:block xl:hidden main-left-thunder-m">
+          <div className="absolute pr-[60%] pb-[30%] hidden md:block xl:hidden main-left-thunder-m">
             <img
               className="bounce-thunder-left-L"
               src="img/home/img_home_bg_shape_top_left-L_t.svg"
@@ -91,7 +90,7 @@ export default function Home() {
               alt=""
             />
           </div>
-          <div className="absolute pl-[55%] pb-[40%]  hidden md:block xl:hidden main-right-thunder-s">
+          <div className="absolute pl-[55%] pb-[30%]  hidden md:block xl:hidden main-right-thunder-s">
             <img
               className="bounce-thunder-right-S"
               src="img/home/img_home_bg_shape_top_right-S_t.svg"
@@ -177,20 +176,35 @@ export default function Home() {
             alt=""
           />
         </div>
-        <div className="hidden overflow-hidden md:block xl:hidden">
+        <div className="hidden overflow-hidden md:block xl:hidden ">
           <img
-            className="absolute bottom-0 left-0 bg-arch w-full"
-            src="img/home/img_home_bg_shape_arch_t.png"
+            className="absolute bottom-0 left-0 bg-arch w-full portrait:hidden"
+            src="img/home/img_home_bg_shape_arch_portrait_t.png"
             alt=""
           />
           <img
-            className="absolute bottom-[-1px] left-0 w-full z-10 bg-mountain"
-            src="img/home/img_home_bg_mountain_t.png"
+            className="absolute bottom-0 left-0  w-full landscape:hidden"
+            src="img/home/img_home_bg_shape_arch_landscape_t.png"
             alt=""
           />
           <img
-            className="absolute bottom-0 left-0 w-full bg-big-thunder"
-            src="img/home/img_home_bg_shape_bottom_t.png"
+            className="absolute bottom-[-1px] left-0 w-full z-10 portrait:hidden bg-mountain"
+            src="img/home/img_home_bg_mountain_portrait_t.png"
+            alt=""
+          />
+          <img
+            className="absolute bottom-[-1px] left-0 w-full z-10 landscape:hidden bg-mountain"
+            src="img/home/img_home_bg_mountain_landscape_t.png"
+            alt=""
+          />
+          <img
+            className="absolute bottom-0 left-0 portrait:hidden w-full bg-big-thunder"
+            src="img/home/img_home_bg_shape_portrait_bottom_t.png"
+            alt=""
+          />
+          <img
+            className="absolute bottom-0 left-0 landscape:hidden w-full bg-big-thunder"
+            src="img/home/img_home_bg_shape_landscape_bottom_t.png"
             alt=""
           />
         </div>
@@ -212,11 +226,11 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className=" h-[200vh] snap-scroll">
-        <div className="h-screen snap-item" />
+      <div className="h-[200vh] snap-scroll ">
+        <div className="h-screen " />
         <div
           id="Mission"
-          className="relative flex flex-col items-center justify-center h-screen overflow-hidden text-center bg-black/90 snap-item"
+          className="snap-item relative flex flex-col items-center justify-center h-screen overflow-hidden text-center bg-black/90 snap-item"
         >
           <p className="section-title">Mission</p>
           <p className=" font-bold text-[1.8rem] max-w-[240px] mt-[3.4rem] md:max-w-[567px] md:text-[2.6rem] xl:max-w-[751px] xl:text-[3.6rem] xl:leading-[5.4rem] xl:mt-[7.2rem] ">
