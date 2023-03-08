@@ -9,7 +9,7 @@ export default function Header({ activeIndex }: any) {
   const [langOpen, setLangOpen] = useState(false);
   // const [selectLang, setSelectLang] = useState(0);
   const [currentIdx, setCurrentIdx] = useState(0);
-  const language = ["Korean", "English", "Japan"];
+  const language = ["Korean", "English"];
   const [headerMenuListData, setHeaderMenuListData] = useState<any>(null);
   const { i18n } = useTranslation();
   useEffect(() => {

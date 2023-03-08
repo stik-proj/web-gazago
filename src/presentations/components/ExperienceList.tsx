@@ -40,7 +40,7 @@ export default function ExperienceList({
         />
         <div className={``}>
           <p className="text-[1.6rem] font-bold text-[#1CE2D9] mt-[3.2rem] xl:text-[2.6rem] ">
-            Experience {index + 1}
+            {data.part}
           </p>
           <p className="leading-[3.6rem] font-bold text-[3.6rem] text-[#b8ff70] mt-[1.8rem] xl:text-[6rem] xl:mt-[4rem] ">
             {data.title}

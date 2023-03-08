@@ -27,6 +27,10 @@ const getTranslationJson = async () => {
       });
       console.log(resKey);
     });
+
+  // await axios.post(
+  //   `https://api.stage.staika.io/services/board/locale-messages?clientId=GAZAGO&sheetName=WEB_GAZAGO`
+  // );
 };
 
 getTranslationJson();

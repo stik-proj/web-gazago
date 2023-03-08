@@ -7,16 +7,21 @@
       "image": "img/experience/img_experience_list1.png"
     },
     {
+      "part": "Experience 2",
+
       "title": "Item",
       "desc": "아이템의 등급이 올라가면 GO 획득률이 높아지는 것은 모두가 알고 있는 사실! 아이템의 등급은 6가지가 있어요!<br> 열심히 해서 최고 등급의 아이템 세트로 맞춰볼까요?",
       "image": "img/experience/img_experience_list2.png"
     },
     {
+      "part": "Experience 3",
+
       "title": "Badge",
       "desc": "뱃지는 명산 100 챌린지를 완수했을 때 획득하는 보상으로 각각 고유의 능력치와 디자인을 갖고 있어요.<br>나만의 뱃지 NFT로써 영구 보존할 수 있으며 상점으로 투명한 거래와 합성도 가능해요!",
       "image": "img/experience/img_experience_list3.png"
     },
     {
+      "part": "Experience 4",
       "title": "Gifticon",
       "desc": "챌린지 또는 활동을 통해서 획득된 TIK로 기프티콘을 살 수 있어요.<br>TIK를 STIK로 교환도 가능하니까 열심히 챌린지 또는 운동하는 것이 좋겠어요!",
       "image": "img/experience/img_experience_list4.png"

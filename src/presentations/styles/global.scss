@@ -12,7 +12,9 @@
 html,
 body {
   overflow: hidden;
+  scroll-snap-type:y mandatory;
   overflow-y: auto;
+
 }
 
 
@@ -519,7 +521,6 @@ body {
   scroll-snap-type:y mandatory;
   overflow-y: scroll;
   scroll-behavior: smooth;
-
 }
 
 .snap-item{
