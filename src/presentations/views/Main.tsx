@@ -15,7 +15,7 @@ const Main = () => {
   const [missionCheck, setMissionCheck] = useState<boolean>(false);
   const [experienceCheck, setExperienceCheck] = useState<boolean>(false);
   const [communityCheck, setCommunityCheck] = useState<boolean>(false);
-  const [faqCheck, setFaqCheck] = useState<boolean>(false);
+  // const [faqCheck, setFaqCheck] = useState<boolean>(false);
   const [screenSize, setScreenSize] = useState(window.innerWidth as number);
 
   const handleResize = () => {
@@ -107,9 +107,9 @@ const Main = () => {
                 // console.log("Inview:", index, inView);
                 if (inView) {
                   setActiveSectionIndex(4);
-                  setFaqCheck(inView);
+                  // setFaqCheck(inView);
                 } else {
-                  setFaqCheck(false);
+                  // setFaqCheck(false);
                 }
               }}
               threshold={0.6}

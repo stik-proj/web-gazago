@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { InView } from "react-intersection-observer";
 export default function ExperienceList({
   data,
-  activeIndex,
+  // activeIndex,
   index,
   current,
 }: any) {
   const [activeSectionIndex, setActiveSectionIndex] = useState<any>(null);
-  const [currentSection, setCurrentSection] = useState<boolean>(false);
+  // const [currentSection, setCurrentSection] = useState<boolean>(false);
   useEffect(() => {
     if (!current) {
       setActiveSectionIndex(9999);
@@ -21,7 +21,7 @@ export default function ExperienceList({
         // console.log("Inview:", index, inView);
         if (inView) {
           setActiveSectionIndex(index);
-          setCurrentSection(inView);
+          // setCurrentSection(inView);
         }
       }}
       threshold={0.6}

@@ -5,7 +5,7 @@ import FaqList from "../components/faqList";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { InView } from "react-intersection-observer";
-export default function Faq({ current }: any) {
+export default function Faq() {
   const [faqListData, setFaqListData] = useState<any>(null);
   const slideRef = useRef<any>(null);
   const [dataLength, setDataLength] = useState(null);
