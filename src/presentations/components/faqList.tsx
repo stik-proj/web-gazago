@@ -7,6 +7,7 @@ export default function FaqList({ data, index }: any) {
   const [currentLang, setCurrentLang] = useState<string>();
   useEffect(() => {
     setCurrentLang(i18n.language);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [t]);
   return (
     <div className=" md:flex md:justify-center md:mx-[3rem] 2xl:ml-[3.6rem]">

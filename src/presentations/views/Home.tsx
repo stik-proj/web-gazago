@@ -1,8 +1,7 @@
-// import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
 export default function Home() {
-  const { t, i18next }: any = useTranslation();
+  const { t }: any = useTranslation();
   return (
     <section id="Home" className="h-full ">
       <div className="w-full overflow-hidden home-background parallax ">

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import listData from "../../data/communityListData.json";
 import CommunityList from "../components/CommunityList";
 import { useTranslation } from "react-i18next";
 export default function Community({ current }: any) {
@@ -31,6 +30,7 @@ export default function Community({ current }: any) {
     if (listData) {
       setCommunityListData(listData);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [t]);
   return (
     <section

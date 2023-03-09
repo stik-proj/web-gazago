@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useEffect, useState } from "react";
-import menuListData from "../../data/HeaderMenuListData.json";
 import HeaderMenuList from "../components/HeaerMenuList";
 import { useTranslation } from "react-i18next";
 
@@ -18,6 +17,7 @@ export default function Header({ activeIndex }: any) {
     if (menu) {
       setHeaderMenuListData(menu);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [t]);
 
   const handleLangClick = (event: any, index: number, item: string) => {
