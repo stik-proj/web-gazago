@@ -11,7 +11,7 @@ const Experience = ({ current }: any) => {
   const [experienceItemListData, setExperienceItemListData] = useState<any>(
     null
   );
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const dataList = [
     {
       part: t(`experience.list.part0`),

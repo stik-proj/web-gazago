@@ -36,6 +36,7 @@ export default function Faq() {
   ];
   useEffect(() => {
     setFaqListData(listData);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [t]);
 
   useEffect(() => {
