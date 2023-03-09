@@ -33,7 +33,7 @@ export default function MissionList({ data, current, index }: any) {
             alt=""
           />
           <div className="md:mt-[1rem]">
-            <p className="text-[#b8ff70] text-[2.8rem] md:text-[3.2rem] xl:text-[3.6rem]">
+            <p className="text-[#b8ff70] font-[700] text-[2.8rem] md:text-[3.2rem] xl:text-[3.6rem]">
               {data.title}
             </p>
             <p className="text-white text-[1.6rem] leading-[2.4rem] mt-[2.4rem] md:text-[1.8rem] md:leading-[3.24rem] break-keep md:w-[259px] xl:mt-[2.4rem] ">
