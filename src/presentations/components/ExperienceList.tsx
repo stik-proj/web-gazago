@@ -13,6 +13,7 @@ export default function ExperienceList({ data, index, current }: any) {
   }, [current]);
   useEffect(() => {
     setCurrentLang(i18n.language);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [t]);
   return (
     <InView

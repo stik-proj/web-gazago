@@ -35,6 +35,7 @@ export default function Mission({ screen, current }: any) {
     if (cardData) {
       setMissionListData(cardData);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [t]);
   const slickSettiong = {
     dots: true,

@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 export default function Roadmap({ screen }: any) {
   const [roadmapListData, setRoadmapListData] = useState<any>(null);
   const [innerScreen, setInnerScreen] = useState(screen as Number);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const listData = [
     {
       quater: t(`roadmap.quater0`),
@@ -81,6 +81,7 @@ export default function Roadmap({ screen }: any) {
         arrayReDivide(listData, 2);
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [t]);
 
   useEffect(() => {

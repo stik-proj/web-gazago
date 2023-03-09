@@ -38,8 +38,8 @@ const Experience = ({ current }: any) => {
     if (dataList) {
       setExperienceListData(dataList);
       setExperienceItemListData(itemListData.data);
-      console.log(i18n);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [t]);
 
   const slickSettiong = {
