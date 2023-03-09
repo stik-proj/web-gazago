@@ -21,7 +21,9 @@ export default function MissionList({ data, current, index }: any) {
     border-[3px] border-black rounded-[20px] 
     shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] 
     md:w-[312px] md:h-[324px] md:flex md:flex-wrap md:mt-[3.1rem]
-    xl:w-[294px] last:py-[3.7rem] mission-card${index} ${
+    xl:w-[294px] md:py-[3.4rem] 
+    en-mission-card
+    mission-card${index} ${
             activeSectionIndex === index && current ? "active" : ""
           }`}
         >
@@ -34,7 +36,7 @@ export default function MissionList({ data, current, index }: any) {
             <p className="text-[#b8ff70] text-[2.8rem] md:text-[3.2rem] xl:text-[3.6rem]">
               {data.title}
             </p>
-            <p className="text-white text-[1.6rem] mt-[2.4rem] md:text-[1.8rem] break-keep md:w-[250px] xl:mt-[3rem] ">
+            <p className="text-white text-[1.6rem] leading-[2.4rem] mt-[2.4rem] md:text-[1.8rem] md:leading-[3.24rem] break-keep md:w-[259px] xl:mt-[2.4rem] ">
               {data.desc}
             </p>
           </div>

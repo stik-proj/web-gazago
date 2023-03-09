@@ -7,29 +7,29 @@ import { useTranslation } from "react-i18next";
 export default function Header({ activeIndex }: any) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
-  // const [selectLang, setSelectLang] = useState(0);
   const [currentIdx, setCurrentIdx] = useState(0);
   const language = ["Korean", "English"];
   const [headerMenuListData, setHeaderMenuListData] = useState<any>(null);
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const menu = [t(`menu0`), t(`menu1`), t(`menu2`), t(`menu3`), t(`menu4`)];
   useEffect(() => {
-    if (menuListData) {
-      setHeaderMenuListData(menuListData.data);
+    console.log(menu);
+    if (menu) {
+      setHeaderMenuListData(menu);
     }
-  }, []);
-  const handleLangClick = (index: number, item: string) => {
+  }, [t]);
+
+  const handleLangClick = (event: any, index: number, item: string) => {
+    event.preventDefault();
     setLangOpen(false);
     setCurrentIdx(index);
-    console.log(item);
+
     if (item === "Korean") {
       i18n.changeLanguage("ko");
     } else if (item === "English") {
       i18n.changeLanguage("en");
-    } else if (item === "Japan") {
-      i18n.changeLanguage("ja");
     }
-
-    // setCurrentIdx()
   };
   const handleMenuOpen = (value: any) => {
     setMenuOpen(value);
@@ -102,7 +102,7 @@ export default function Header({ activeIndex }: any) {
                 <li className="" key={index.toString()}>
                   <a
                     href="#"
-                    onClick={() => handleLangClick(index, item)}
+                    onClick={(e) => handleLangClick(e, index, item)}
                     className={`text-[1.3rem] font-[500] text-[#999999] xl:text-[1.4rem] ${
                       currentIdx === index
                         ? "font-bold underline text-black"

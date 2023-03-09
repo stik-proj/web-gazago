@@ -1,25 +1,46 @@
 import { useEffect, useState } from "react";
-import listData from "../../data/experienceListData.json";
 import itemListData from "../../data/experienceItemListData.json";
 import ExperienceList from "../components/ExperienceList";
 import ItemList from "../components/itemList";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import { useTranslation } from "react-i18next";
 const Experience = ({ current }: any) => {
   const [experienceListData, setExperienceListData] = useState<any>(null);
   const [experienceItemListData, setExperienceItemListData] = useState<any>(
     null
   );
-
+  const { t, i18n } = useTranslation();
+  const dataList = [
+    {
+      part: t(`experience.list.part0`),
+      title: t(`experience.list.title0`),
+      desc: t(`experience.list.desc0`),
+    },
+    {
+      part: t(`experience.list.part1`),
+      title: t(`experience.list.title1`),
+      desc: t(`experience.list.desc1`),
+    },
+    {
+      part: t(`experience.list.part2`),
+      title: t(`experience.list.title2`),
+      desc: t(`experience.list.desc2`),
+    },
+    {
+      part: t(`experience.list.part3`),
+      title: t(`experience.list.title3`),
+      desc: t(`experience.list.desc3`),
+    },
+  ];
   useEffect(() => {
-    if (listData) {
-      setExperienceListData(listData.data);
+    if (dataList) {
+      setExperienceListData(dataList);
       setExperienceItemListData(itemListData.data);
-      console.log("ex:" + current);
+      console.log(i18n);
     }
-  }, [current]);
+  }, [t]);
 
   const slickSettiong = {
     arrows: false,

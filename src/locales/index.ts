@@ -18,5 +18,7 @@ i18next.use(initReactI18next).init({
     escapeValue: false,
   },
 });
-
+i18next.on("languageChanged", (lng) => {
+  document.documentElement.setAttribute("lang", lng);
+});
 export default i18next;

@@ -15,10 +15,10 @@ export default function MenuList(props: any) {
         activeClass="active"
         smooth
         spy
-        to={props.data.menu}
+        to={props.data}
       >
         <p className="relative inline-block font-[700] text-[2.5rem] text-white xl:text-[1.4rem]">
-          {props.data.menu}
+          {props.data}
         </p>
       </Link>
     </li>

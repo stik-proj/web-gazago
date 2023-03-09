@@ -1,8 +1,8 @@
 // import { useEffect, useRef } from "react";
-// import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
-  // const { t, i18next }: any = useTranslation();
+  const { t, i18next }: any = useTranslation();
   return (
     <section id="Home" className="h-full ">
       <div className="w-full overflow-hidden home-background parallax ">
@@ -14,7 +14,7 @@ export default function Home() {
               alt=""
             />
             <p className="text-[1.8rem] font-extrabold mt-[1rem] text-black md:text-[2.4rem] xl:text-[3.2rem]">
-              돈이 되는 챌린지 시즌 1
+              {t(`home.desc`)}
             </p>
             <div className="md:flex md:mt-[4.2rem] xl:mt-[5rem]">
               <a
@@ -232,20 +232,22 @@ export default function Home() {
           id="Mission"
           className="relative flex flex-col items-center justify-center h-screen overflow-hidden text-center snap-item bg-black/90"
         >
-          <p className="section-title">Mission</p>
-          <p className=" font-bold text-[1.8rem] max-w-[240px] mt-[3.4rem] md:max-w-[567px] md:text-[2.6rem] xl:max-w-[751px] xl:text-[3.6rem] xl:leading-[5.4rem] xl:mt-[7.2rem] ">
-            <span className="block font-bold text-[1.8rem] md:text-[2.6rem] xl:max-w-[751px] xl:text-[3.6rem] xl:leading-[5.4rem]">
-              블록체인 기술로 더 많은 사람들이 새로운 금융 시장과
+          <p className="section-title">{t(`mission.title`)}</p>
+          <p className=" font-bold text-[1.8rem] max-w-[240px] mt-[3.4rem] md:max-w-[600px] md:text-[2.6rem] xl:max-w-full xl:text-[3.6rem] xl:leading-[5.4rem] xl:mt-[7.2rem] ">
+            <span className="block font-bold text-[1.8rem] md:text-[2.6rem] xl:max-w-full xl:text-[3.6rem] xl:leading-[5.4rem]">
+              {t(`mission.desc1`)}
             </span>
-            디지털 피트니스를 누릴 수 있도록
+            {t(`mission.desc2`)}
           </p>
-          <p className="font-semibold text-[1.4rem] w-[302px] break-keep mt-[2.4rem] md:w-[567px] xl:w-[972px] xl:text-[2.4rem] xl:leading-[4.32rem]">
-            대한민국의 국민 중 60.8%는 생활체육에 참여합니다.¹그 중 등산과
-            걷기를 하는 54.9%의 국민들에게 디지털 피트니스를 누릴 수 있도록
-            아낌없이 지원하겠습니다.
-          </p>
-          <p className="text-[1.2rem] text-[#808080] mt-[2.4rem] md:text-[1.4rem] xl:text-[1.8rem]">
-            1. 문화체육관광부, 국민생활체육조사 2021
+          <p
+            className="font-semibold text-[1.4rem] w-[302px] break-keep mt-[2.4rem] md:w-[567px] xl:w-full xl:text-[2.4rem] xl:leading-[4.32rem] "
+            dangerouslySetInnerHTML={{ __html: t(`mission.desc3`) }}
+          />
+          <p
+            className="text-[1.2rem] text-[#808080] mt-[2.4rem] md:text-[1.4rem] xl:text-[1.8rem] 
+           en-mission"
+          >
+            {t(`mission.desc4`)}
           </p>
         </div>
       </div>

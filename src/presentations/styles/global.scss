@@ -33,7 +33,7 @@ body {
 
 }
 .section-title {
-  font-family: "Montserrat";
+  font-family: "Montserrat" !important;
   font-size: 36px;
   font-weight: 700;
   line-height: 36px;
@@ -44,13 +44,15 @@ body {
 @media only screen and (min-width: 767px) {
   .section-title {
     font-size: 50px;
-    -webkit-text-stroke: 2px #000000;
+    // -webkit-text-stroke: 2px #000000;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   }
 }
 
 @media only screen and (min-width: 1023px) {
   .section-title {
     font-size: 60px;
+
   }
 }
 .launcher-logo {
@@ -124,9 +126,6 @@ body {
   }
 }
 @media only screen and (max-width: 768px) {
-  // .slick-slide img {
-  //   display: none;
-  // }
   .faq-img img {
     display: none;
   }
@@ -139,7 +138,7 @@ body {
     display: block;
     top: 133px;
     left: 0;
-    width: 90%;
+    width: 95%;
     height: 1px;
   }
 }
@@ -151,6 +150,8 @@ body {
   line-height: 2.88rem;
   color: #1ce2d9;
 }
+
+
 
 @media only screen and (max-width: 1279px) {
   .menu p::after{
@@ -492,6 +493,9 @@ body {
   opacity: 1;
   transform: translateY(0px);
 }
+// .faq-list:first-child{
+//   width: 300px;
+// }
 .launcher-bounce{
   animation: ease-in-out 4s launcherBounce infinite;
 }
@@ -519,7 +523,6 @@ body {
 
 .snap-scroll{
   scroll-snap-type:y mandatory;
-  overflow-y: scroll;
   scroll-behavior: smooth;
 }
 
@@ -527,3 +530,96 @@ body {
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
+
+:lang(en) .en-mission {
+}
+
+@media only screen and (max-width:768px) {
+  :lang(en) .en-mission {
+    width: 234px;
+  }
+}
+// [&:lang(en)]:!text-red-400
+
+:lang(en) .en-mission-card {
+  height:385px;
+}
+
+@media only screen and (max-width:1280px) {
+  :lang(en) .en-mission-card {
+    height: 350px;
+    padding-bottom: 0;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  :lang(en) .en-mission-card {
+    height: 319px;
+    padding-bottom: 0;
+  }
+}
+:lang(en) .en-experience-list-desc {
+  width: 454px;
+}
+@media only screen and (max-width:1280px) {
+  :lang(en) .en-experience-list-desc {
+    width: 314px;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  :lang(en) .en-experience-list-desc {
+    width: 273px;
+  }
+}
+:lang(en) .en-faq-card {
+  height: 470px;
+}
+
+:lang(en) .en-faq-card-title {
+  width:660px;
+}
+:lang(en) .en-faq-title-last {
+
+}
+:lang(en) .en-faq-card-desc{
+
+}
+@media only screen and (max-width:1536px) {
+  :lang(en) .en-faq-card {
+    height: 470px;
+  }
+
+  :lang(en) .en-faq-card-title {
+    width:364px;
+   font-size: 2rem;
+    line-height: 3.2rem;
+  }
+  :lang(en) .en-faq-title-last {
+    width:190px;
+  }
+  :lang(en) .en-faq-card-desc{
+    width:486px;
+  }
+}
+@media only screen and (max-width:768px) {
+  :lang(en) .en-faq-card {
+    height: 470px;
+  }
+  :lang(en) .en-faq-card-desc {
+    top: 186px;
+    width:276px;
+  }
+  :lang(en) .en-faq-card-title {
+    width:291px;
+   font-size: 1.6rem;
+   line-height: 2.56rem;
+  }
+  :lang(en) .faq-card-line::before {
+    top: 144px;
+  }
+}
+
+
+
+  

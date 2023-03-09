@@ -1,11 +1,10 @@
 export default function RoadmapListItem({ data, index }: any) {
   const descList = (item: any) => {
     const desc1: any = [];
-    for (let i = 0; i < item.desc[0].text.length; i++) {
+    for (let i = 0; i < item.desc.length; i++) {
       desc1.push(
         <p className="text-[1.6rem] leading-[2.4rem]" key={i}>
-          {" "}
-          {item.desc[0].text[i]}
+          {item.desc[i]}
         </p>
       );
     }

@@ -5,15 +5,39 @@ import FaqList from "../components/faqList";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { InView } from "react-intersection-observer";
+import { useTranslation } from "react-i18next";
 export default function Faq() {
   const [faqListData, setFaqListData] = useState<any>(null);
   const slideRef = useRef<any>(null);
   const [dataLength, setDataLength] = useState(null);
   const [activeSlide, setActiveSlide] = useState(1);
   const [currentView, setCurrentView] = useState<boolean>(false);
+  const { t } = useTranslation();
+  const listData = [
+    {
+      quater: t(`faq.list.quater0`),
+      title: t(`faq.list.title0`),
+      desc: t(`faq.list.desc0`),
+    },
+    {
+      quater: t(`faq.list.quater1`),
+      title: t(`faq.list.title1`),
+      desc: t(`faq.list.desc1`),
+    },
+    {
+      quater: t(`faq.list.quater2`),
+      title: t(`faq.list.title2`),
+      desc: t(`faq.list.desc2`),
+    },
+    {
+      quater: t(`faq.list.quater3`),
+      title: t(`faq.list.title3`),
+      desc: t(`faq.list.desc3`),
+    },
+  ];
   useEffect(() => {
-    setFaqListData(listData.data);
-  }, []);
+    setFaqListData(listData);
+  }, [t]);
 
   useEffect(() => {
     if (faqListData) {
@@ -62,7 +86,7 @@ export default function Faq() {
             <Slider ref={slideRef} {...slickSettings}>
               {faqListData
                 ? faqListData.map((item: any, index: any) => (
-                    <FaqList data={item} key={index} />
+                    <FaqList data={item} key={index} index={index} />
                   ))
                 : null}
             </Slider>

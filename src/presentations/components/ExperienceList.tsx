@@ -1,18 +1,19 @@
 import { useEffect, useState } from "react";
 import { InView } from "react-intersection-observer";
-export default function ExperienceList({
-  data,
-  // activeIndex,
-  index,
-  current,
-}: any) {
+import { useTranslation } from "react-i18next";
+
+export default function ExperienceList({ data, index, current }: any) {
   const [activeSectionIndex, setActiveSectionIndex] = useState<any>(null);
-  // const [currentSection, setCurrentSection] = useState<boolean>(false);
+  const { t, i18n } = useTranslation();
+  const [currentLang, setCurrentLang] = useState<string>();
   useEffect(() => {
     if (!current) {
       setActiveSectionIndex(9999);
     }
   }, [current]);
+  useEffect(() => {
+    setCurrentLang(i18n.language);
+  }, [t]);
   return (
     <InView
       as="div"
@@ -34,19 +35,20 @@ export default function ExperienceList({
         }`}
       >
         <img
-          className={` w-[285px] md:w-[300px] xl:w-[622px]`}
-          src={data.image}
+          className={`w-[285px] md:w-[300px] xl:w-[622px]`}
+          src={`img/experience/img_experience_list${index +
+            1}_${currentLang}.png`}
           alt=""
         />
-        <div className={``}>
-          <p className="text-[1.6rem] font-bold text-[#1CE2D9] mt-[3.2rem] xl:text-[2.6rem] ">
+        <div>
+          <p className=" text-[1.6rem] font-bold text-[#1CE2D9] mt-[3.2rem] xl:text-[2.6rem] ">
             {data.part}
           </p>
           <p className="leading-[3.6rem] font-bold text-[3.6rem] text-[#b8ff70] mt-[1.8rem] xl:text-[6rem] xl:mt-[4rem] ">
             {data.title}
           </p>
           <p
-            className="text-[1.4rem] leading-[2.4rem] mt-[3.2rem] w-[297px] break-keep md:text-[1.6rem] xl:text-[2.4rem] xl:leading-[5rem] xl:w-[418px] xl:mt-[4rem]"
+            className="text-[1.4rem] leading-[2.4rem] mt-[3.2rem] w-[248px] md:w-[283px] break-keep md:text-[1.6rem] xl:text-[2.4rem] xl:leading-[5rem] xl:w-[435px] xl:mt-[4rem] en-experience-list-desc"
             dangerouslySetInnerHTML={{ __html: data.desc }}
           />
         </div>

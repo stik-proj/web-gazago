@@ -1,17 +1,93 @@
 import { useEffect, useState } from "react";
-import listData from "../../data/roadmapData.json";
 import RoadmapListItem from "../components/RoadmapListItem";
+import { useTranslation } from "react-i18next";
 export default function Roadmap({ screen }: any) {
   const [roadmapListData, setRoadmapListData] = useState<any>(null);
   const [innerScreen, setInnerScreen] = useState(screen as Number);
+  const { t, i18n } = useTranslation();
+  const listData = [
+    {
+      quater: t(`roadmap.quater0`),
+      list: [
+        {
+          title: t(`roadmap.title0`),
+          desc: [t(`roadmap.1q.title0.desc0`), t(`roadmap.1q.title0.desc1`)],
+        },
+        {
+          title: t(`roadmap.title1`),
+          desc: [t(`roadmap.1q.title1.desc0`), t(`roadmap.1q.title1.desc1`)],
+        },
+        {
+          title: t(`roadmap.title2`),
+          desc: [t(`roadmap.1q.title2.desc0`), t(`roadmap.1q.title2.desc1`)],
+        },
+      ],
+    },
+    {
+      quater: t(`roadmap.quater1`),
+      list: [
+        {
+          title: t(`roadmap.title0`),
+          desc: [t(`roadmap.2q.title0.desc0`), t(`roadmap.2q.title0.desc1`)],
+        },
+        {
+          title: t(`roadmap.title1`),
+          desc: [t(`roadmap.2q.title1.desc0`), t(`roadmap.2q.title1.desc1`)],
+        },
+        {
+          title: t(`roadmap.title2`),
+          desc: [t(`roadmap.2q.title2.desc0`), t(`roadmap.2q.title2.desc1`)],
+        },
+      ],
+    },
+    {
+      quater: t(`roadmap.quater2`),
+      list: [
+        {
+          title: t(`roadmap.title0`),
+          desc: [t(`roadmap.3q.title0.desc0`), t(`roadmap.3q.title0.desc1`)],
+        },
+        {
+          title: t(`roadmap.title1`),
+          desc: [t(`roadmap.3q.title1.desc0`), t(`roadmap.3q.title1.desc1`)],
+        },
+        {
+          title: t(`roadmap.title2`),
+          desc: [t(`roadmap.3q.title2.desc0`), t(`roadmap.3q.title2.desc1`)],
+        },
+      ],
+    },
+    {
+      quater: t(`roadmap.quater3`),
+      list: [
+        {
+          title: t(`roadmap.title0`),
+          desc: [t(`roadmap.4q.title0.desc0`), t(`roadmap.4q.title0.desc1`)],
+        },
+        {
+          title: t(`roadmap.title1`),
+          desc: [t(`roadmap.4q.title1.desc0`), t(`roadmap.4q.title1.desc1`)],
+        },
+        {
+          title: t(`roadmap.title2`),
+          desc: [t(`roadmap.4q.title2.desc0`), t(`roadmap.4q.title2.desc1`)],
+        },
+      ],
+    },
+  ];
   useEffect(() => {
-    if (listData.data.length > 0) {
-      arrayReDivide(listData.data, 2);
+    if (listData) {
+      if (listData.length > 0) {
+        arrayReDivide(listData, 2);
+      }
     }
+  }, [t]);
+
+  useEffect(() => {
     if (screen) {
       setInnerScreen(screen);
     }
-  }, [innerScreen, screen]);
+  }, [screen]);
 
   const arrayReDivide = (arr: any, n: any) => {
     const oldArr = arr;
@@ -29,7 +105,7 @@ export default function Roadmap({ screen }: any) {
       id="Roadmap"
       className=" h-full flex flex-col justify-center items-center mx-[2.5rem] py-[20rem]"
     >
-      <p className="section-title ">Roadmap</p>
+      <p className="section-title ">{t(`roadmap.title`)}</p>
       <div
         className={
           innerScreen &&

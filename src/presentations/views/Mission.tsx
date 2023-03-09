@@ -1,20 +1,41 @@
 import MissionList from "../components/MissionList";
-import listData from "../../data/missionListData.json";
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 export default function Mission({ screen, current }: any) {
   const [missionListData, setMissionListData] = useState<any>(null);
   const [screenSize, setScreenSize] = useState(screen as number);
-
+  const { t } = useTranslation();
+  const cardData = [
+    {
+      title: t(`mission.list.title0`),
+      desc: t(`mission.list.desc0`),
+    },
+    {
+      title: t(`mission.list.title1`),
+      desc: t(`mission.list.desc1`),
+    },
+    {
+      title: t(`mission.list.title2`),
+      desc: t(`mission.list.desc2`),
+    },
+    {
+      title: t(`mission.list.title3`),
+      desc: t(`mission.list.desc3`),
+    },
+  ];
   useEffect(() => {
-    if (listData) {
-      setMissionListData(listData.data);
-      console.log(screenSize);
-    }
     setScreenSize(screen);
   }, [screen, screenSize]);
+
+  useEffect(() => {
+    if (cardData) {
+      setMissionListData(cardData);
+    }
+  }, [t]);
   const slickSettiong = {
     dots: true,
     arrows: false,
@@ -31,7 +52,7 @@ export default function Mission({ screen, current }: any) {
         md:border-3 md:px-[4rem] md:py-[1rem]"
         >
           <span className="font-bold text-[1.8rem] md:text-[2.6rem] xl:text-[3.2rem]">
-            등산으로 시작하는 가자고
+            {t(`mission.list.sectionTitle`)}
           </span>
         </div>
         <ul className="mt-[4.3rem] md:flex md:justify-between md:flex-wrap md:max-w-[650px] md:mx-auto xl:max-w-[1250px] xl:flex-nowrap xl:justify-around mission-list">
