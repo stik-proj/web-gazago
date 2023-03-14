@@ -12,7 +12,9 @@ const resources = {
 };
 const loadResources = async (lng: any) => {
   return await Axios.get(
-    "https://api.stage.staika.io/services/board/api/locale-messages?clientId=GAZAGO&sheetName=WEB_GAZAGO"
+    `${
+      process.env.REACT_APP_BASE_URL
+    }/services/board/api/locale-messages?clientId=GAZAGO&sheetName=WEB_GAZAGO`
   )
     .then((res) => {
       return res.data;
