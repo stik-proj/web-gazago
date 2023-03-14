@@ -5,7 +5,9 @@ const { default: axios } = require("axios");
 const getTranslationJson = async () => {
   await axios
     .get(
-      `https://api.stage.staika.io/services/board/locale-messages?clientId=GAZAGO&sheetName=WEB_GAZAGO`
+      `${
+        process.env.REACT_APP_BASE_URL
+      }/services/board/locale-messages?clientId=GAZAGO&sheetName=WEB_GAZAGO`
     )
     .then((res) => {
       const originData = res.data;
