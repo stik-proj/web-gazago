@@ -44,7 +44,8 @@
     "build:stage": "env-cmd -f .env.development craco build",
     "build": "craco build",
     "test": "craco test",
-    "translation": "node translation.js",
+    "translation:stage": " NODE_ENV=stage node translation.js",
+    "translation:prod": " NODE_ENV=production node translation.js",
     "eject": "craco eject"
   },
   "eslintConfig": {
