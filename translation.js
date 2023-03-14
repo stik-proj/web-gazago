@@ -6,7 +6,7 @@ const getTranslationJson = async () => {
   await axios
     .get(
       `${
-        process.env.API_URL
+        process.env.REACT_APP_BASE_URL
       }/services/board/locale-messages?clientId=GAZAGO&sheetName=WEB_GAZAGO`
     )
     .then((res) => {
