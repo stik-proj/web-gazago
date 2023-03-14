@@ -47,7 +47,7 @@ export default function Mission({ screen, current }: any) {
   };
   return (
     <section className="h-full relative text-center pt-[9rem] md:pt-[24rem]">
-      <div className="pb-[12.6rem] ">
+      <div className="pb-[12.6rem] xl:pb-[30rem] ">
         <div
           className="inline-block bg-[#1d1d1d] border-2 border-black rounded-[30px] shadow-[2px_4px_0px_0px_rgba(0,0,0,1)] px-[2rem] py-[1rem]
         md:border-3 md:px-[4rem] md:py-[1rem]"
@@ -56,7 +56,7 @@ export default function Mission({ screen, current }: any) {
             {t(`mission.list.sectionTitle`)}
           </span>
         </div>
-        <ul className="mt-[4.3rem] md:flex md:justify-between md:flex-wrap md:max-w-[650px] md:mx-auto xl:max-w-[1250px] xl:flex-nowrap xl:justify-around mission-list">
+        <ul className="mt-[4.3rem] xl:mt-[7rem] md:flex md:justify-between md:flex-wrap md:max-w-[650px] md:mx-auto xl:max-w-[1250px] xl:flex-nowrap xl:justify-around mission-list">
           {screenSize && screenSize < 767 ? (
             <Slider {...slickSettiong}>
               {missionListData

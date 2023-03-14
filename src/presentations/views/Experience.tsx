@@ -50,7 +50,7 @@ const Experience = ({ current }: any) => {
     autoplaySpeed: 1500,
     infinite: true,
     speed: 1500,
-    slidesToShow: 8,
+    slidesToShow: 10,
     slidesToScroll: 1,
     cssEase: "linear",
     responsive: [
@@ -109,13 +109,31 @@ const Experience = ({ current }: any) => {
           slidesToShow: 7,
         },
       },
+      {
+        breakpoint: 1920,
+        settings: {
+          slidesToShow: 8,
+        },
+      },
+      {
+        breakpoint: 2000,
+        settings: {
+          slidesToShow: 8,
+        },
+      },
+      {
+        breakpoint: 2250,
+        settings: {
+          slidesToShow: 9,
+        },
+      },
     ],
   };
 
   return (
     <section
       id="Experience"
-      className="relative text-center h-full flex-col justify-center items-center py-[10rem] md:text-start"
+      className="relative text-center h-full flex-col justify-center items-center pt-[10rem] pb-[7rem] md:pb-[14rem] xl:pb-[25rem] md:text-start"
     >
       <p className="section-title">Experience</p>
       <ul className={`${current ? "experience-list" : ""}`}>

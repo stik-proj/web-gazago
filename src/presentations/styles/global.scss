@@ -619,7 +619,11 @@ body {
     top: 144px;
   }
 }
-
+@media only screen and (max-width:768px) {
+  :lang(en) .en-roadmap-list{
+    padding-left:4rem;
+  }
+}
 
 
   

@@ -19,11 +19,9 @@ export default function ExperienceList({ data, index, current }: any) {
     <InView
       as="div"
       key={index.toString()}
-      onChange={(inView, entry) => {
-        // console.log("Inview:", index, inView);
+      onChange={(inView) => {
         if (inView) {
           setActiveSectionIndex(index);
-          // setCurrentSection(inView);
         }
       }}
       threshold={0.6}
@@ -37,8 +35,12 @@ export default function ExperienceList({ data, index, current }: any) {
       >
         <img
           className={`w-[285px] md:w-[300px] xl:w-[622px]`}
-          src={`img/experience/img_experience_list${index +
-            1}_${currentLang}.png`}
+          src={`${
+            currentLang
+              ? `img/experience/img_experience_list${index +
+                  1}_${currentLang}.png`
+              : `img/experience/img_experience_list${index + 1}_ko.png`
+          }`}
           alt=""
         />
         <div>
@@ -49,7 +51,7 @@ export default function ExperienceList({ data, index, current }: any) {
             {data.title}
           </p>
           <p
-            className="text-[1.4rem] leading-[2.4rem] mt-[3.2rem] w-[248px] md:w-[283px] break-keep md:text-[1.6rem] xl:text-[2.4rem] xl:leading-[5rem] xl:w-[435px] xl:mt-[4rem] en-experience-list-desc"
+            className="text-[1.4rem] leading-[2.4rem] mt-[3.2rem] w-[248px] md:w-[283px] break-keep md:text-[1.6rem] md:leading-[2.88rem] xl:text-[2.4rem] xl:leading-[5rem] xl:w-[435px] xl:mt-[4rem] en-experience-list-desc"
             dangerouslySetInnerHTML={{ __html: data.desc }}
           />
         </div>

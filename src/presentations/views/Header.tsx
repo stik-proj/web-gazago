@@ -13,7 +13,6 @@ export default function Header({ activeIndex }: any) {
 
   const menu = [t(`menu0`), t(`menu1`), t(`menu2`), t(`menu3`), t(`menu4`)];
   useEffect(() => {
-    console.log(menu);
     if (menu) {
       setHeaderMenuListData(menu);
     }

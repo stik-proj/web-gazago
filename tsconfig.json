@@ -17,5 +17,5 @@
     "jsx": "react-jsx",
     "baseUrl": "."
   },
-  "include": ["src", "public/locales"]
+  "include": ["src/**/*", "public/locales"]
 }

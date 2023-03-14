@@ -41,7 +41,7 @@ export default function Community({ current }: any) {
         <p className=" section-title !text-start md:!text-center 2xl:!text-start md:pt-[10rem]">
           {t(`community.title`)}
         </p>
-        <div className="flex flex-col items-start  md:justify-center md:items-start md:flex-row md:mt-[4rem] 2xl:justify-between 2xl:items-start">
+        <div className="flex flex-col items-start  md:justify-center md:items-start md:flex-row md:mt-[7rem] 2xl:justify-between 2xl:items-start">
           <div>
             <p className="font-bold text-[3.2rem] leading-[5rem] mt-[3rem] md:text-[4.0rem] md:leading-[5.8rem] 2xl:text-[5rem] 2xl:leading-[6.5rem]">
               {t(`community.subTitle1`)}

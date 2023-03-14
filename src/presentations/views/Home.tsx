@@ -218,7 +218,7 @@ export default function Home() {
         </div>
       </div>
       <div className="h-[200vh] snap-scroll ">
-        <div className="h-screen " />
+        <div className="h-screen" />
         <div
           id="Mission"
           className="relative flex flex-col items-center justify-center h-screen overflow-hidden text-center snap-item bg-black/90"

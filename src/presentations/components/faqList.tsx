@@ -39,10 +39,14 @@ export default function FaqList({ data, index }: any) {
                 index === 0 ? "md:w-[161px] 2xl:w-[300px]" : ""
               } `}
               src={`${
-                index === 0
-                  ? `/img/faq/img_faq_q${index + 1}_${currentLang}.png`
-                  : `/img/faq/img_faq_q${index + 1}.png`
-              } `}
+                currentLang
+                  ? `${
+                      index === 0 && currentLang
+                        ? `/img/faq/img_faq_q${index + 1}_${currentLang}.png`
+                        : `/img/faq/img_faq_q${index + 1}.png`
+                    } `
+                  : ""
+              }`}
               alt=""
             />
           </div>

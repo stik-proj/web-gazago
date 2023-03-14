@@ -5,10 +5,10 @@ import Mission from "./Mission";
 import Experience from "./Experience";
 import Roadmap from "./Roadmap";
 import Community from "./Community";
-import Faq from "./Faq";
 import Launcher from "./Launcher";
 import Footer from "./Footer";
 import { InView } from "react-intersection-observer";
+import Faq from "./Faq";
 
 const Main = () => {
   const [activeSectionIndex, setActiveSectionIndex] = useState<any>(null);
@@ -29,9 +29,7 @@ const Main = () => {
     };
   }, []);
 
-  useEffect(() => {
-    console.log(activeSectionIndex);
-  }, [activeSectionIndex]);
+  useEffect(() => {}, [activeSectionIndex]);
   return (
     <>
       <div className="overflow-hidden">
@@ -41,8 +39,7 @@ const Main = () => {
           <div className="relative z-10 bg-[#111111]">
             <InView
               as="div"
-              onChange={(inView, entry) => {
-                // console.log("Inview:", index, inView);
+              onChange={(inView) => {
                 if (inView) {
                   setActiveSectionIndex(0);
                   setMissionCheck(inView);
@@ -59,12 +56,10 @@ const Main = () => {
             </InView>
             <InView
               as="div"
-              onChange={(inView, entry) => {
-                // console.log("Inview:", inView);
+              onChange={(inView) => {
                 if (inView) {
                   setActiveSectionIndex(1);
                   setExperienceCheck(inView);
-                  console.log(experienceCheck);
                 } else {
                   setExperienceCheck(false);
                 }
@@ -76,8 +71,7 @@ const Main = () => {
 
             <InView
               as="div"
-              onChange={(inView, entry) => {
-                // console.log("Inview:", index, inView);
+              onChange={(inView) => {
                 if (inView) {
                   setActiveSectionIndex(2);
                 }
@@ -88,8 +82,7 @@ const Main = () => {
             </InView>
             <InView
               as="div"
-              onChange={(inView, entry) => {
-                // console.log("Inview:", entry, inView);
+              onChange={(inView) => {
                 if (inView) {
                   setActiveSectionIndex(3);
                   setCommunityCheck(inView);
@@ -103,13 +96,9 @@ const Main = () => {
             </InView>
             <InView
               as="div"
-              onChange={(inView, entry) => {
-                // console.log("Inview:", index, inView);
+              onChange={(inView) => {
                 if (inView) {
                   setActiveSectionIndex(4);
-                  // setFaqCheck(inView);
-                } else {
-                  // setFaqCheck(false);
                 }
               }}
               threshold={0.6}

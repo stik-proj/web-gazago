@@ -112,7 +112,7 @@ export default function Roadmap({ screen }: any) {
           innerScreen &&
           `${
             innerScreen < 767
-              ? "w-[100%] bg-[#1d1d1d] border-[3px] border-black rounded-[20px] pl-[6rem]"
+              ? "w-[100%] bg-[#1d1d1d] border-[3px] border-black rounded-[20px] pl-[6rem] en-roadmap-list"
               : "md:w-[650px] md:pl-0 2xl:w-[1250px] 2xl:flex 2xl:bg-[#1d1d1d] 2xl:border-[3px] 2xl:border-black 2xl:rounded-[20px]"
           } mt-[7.4rem] 2xl:mt[7.4rem]`
         }

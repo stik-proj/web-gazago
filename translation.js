@@ -25,7 +25,6 @@ const getTranslationJson = async () => {
           "utf8"
         );
       });
-      console.log(resKey);
     });
 
   // await axios.post(
