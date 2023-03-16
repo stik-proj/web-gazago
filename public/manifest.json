@@ -3,12 +3,12 @@
   "name": "WEB-GAZAGO",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "favicon.ico?v=2",
       "sizes": "16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "logo192.png?v=2",
       "type": "image/png",
       "sizes": "192x192"
     }
