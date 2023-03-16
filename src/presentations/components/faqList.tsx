@@ -42,8 +42,8 @@ export default function FaqList({ data, index }: any) {
                 currentLang
                   ? `${
                       index === 0 && currentLang
-                        ? `/img/faq/img_faq_q${index + 1}_${currentLang}.png`
-                        : `/img/faq/img_faq_q${index + 1}.png`
+                        ? `/img/faq/img_faq_q${index + 1}_${currentLang}_2x.png`
+                        : `/img/faq/img_faq_q${index + 1}_2x.png`
                     } `
                   : ""
               }`}
