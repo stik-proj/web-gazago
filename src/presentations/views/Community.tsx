@@ -25,6 +25,11 @@ export default function Community({ current }: any) {
       desc: t(`community.list.desc3`),
       link: t(`community.list.link3`),
     },
+    {
+      title: t(`community.list.title4`),
+      desc: t(`community.list.desc4`),
+      link: t(`community.list.link4`),
+    },
   ];
   useEffect(() => {
     if (listData) {
