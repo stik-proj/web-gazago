@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 
 export default function Footer() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const data = {
     terms: t("footer.terms.link"),
