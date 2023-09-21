@@ -11,9 +11,11 @@
 }
 html,
 body {
-  overflow: hidden;
-  scroll-snap-type:y mandatory;
-  overflow-y: auto;
+  background-color: #212121;
+
+  // overflow: hidden;
+  // scroll-snap-type:y mandatory;
+  // overflow-y: auto;
 
 }
 
@@ -526,15 +528,15 @@ color:#858585;
   }
 }
 
-.snap-scroll{
-  scroll-snap-type:y mandatory;
-  scroll-behavior: smooth;
-}
+// .snap-scroll{
+//   scroll-snap-type:y mandatory;
+//   scroll-behavior: smooth;
+// }
 
-.snap-item{
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}
+// .snap-item{
+//   scroll-snap-align: start;
+//   scroll-snap-stop: always;
+// }
 
 :lang(en) .en-mission {
 }

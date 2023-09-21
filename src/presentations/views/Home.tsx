@@ -1,10 +1,38 @@
+import { createRef, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { InView } from "react-intersection-observer";
 
-export default function Home() {
+export default function Home({ current, inViewCheck }: any) {
+  const scrollRef = useRef<null | HTMLDivElement>(null);
+  const [view, setView] = useState(false);
   const { t }: any = useTranslation();
+  useEffect(() => {
+    if (view) {
+      console.log(view);
+      scrollToMission();
+    }
+  }, [view]);
+  useEffect(() => {}, []);
+  const scrollToMission = () => {
+    if (current > 1 && current < 2000) {
+      if (scrollRef && scrollRef.current /* + other conditions */) {
+        scrollRef!.current!.scrollIntoView({
+          behavior: "smooth",
+          block: "end",
+        });
+        console.log(scrollRef.current);
+        console.log(current);
+      }
+    }
+  };
   return (
     <section id="Home" className="h-full ">
-      <div className="w-full overflow-hidden home-background parallax ">
+      <div
+        className={`w-full overflow-hidden home-background ${
+          current < 3311 ? `parallax` : "hidden"
+        }
+         `}
+      >
         <div className="relative z-30 flex flex-col items-center justify-center h-screen ">
           <div className="z-30 flex flex-col items-center justify-center main-cont">
             <img
@@ -217,31 +245,43 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="h-[200vh] snap-scroll ">
-        <div className="h-screen" />
-        <div
-          id="Mission"
-          className="relative flex flex-col items-center justify-center h-screen overflow-hidden text-center snap-item bg-black/90"
-        >
-          <p className="section-title">{t(`mission.title`)}</p>
-          <p className=" font-bold text-[1.8rem] max-w-[240px] mt-[3.4rem] md:max-w-[600px] md:text-[2.6rem] xl:max-w-full xl:text-[3.6rem] xl:leading-[5.4rem] xl:mt-[7.2rem] ">
-            <span className="block font-bold text-[1.8rem] md:text-[2.6rem] xl:max-w-full xl:text-[3.6rem] xl:leading-[5.4rem]">
-              {t(`mission.desc1`)}
-            </span>
-            {t(`mission.desc2`)}
-          </p>
-          <p
-            className="font-semibold text-[1.4rem] w-[302px] break-keep mt-[2.4rem] md:w-[567px] xl:w-full xl:text-[2.4rem] xl:leading-[4.32rem] "
-            dangerouslySetInnerHTML={{ __html: t(`mission.desc3`) }}
-          />
-          <p
-            className="text-[1.2rem] text-[#808080] mt-[2.4rem] md:text-[1.4rem] xl:text-[1.8rem] 
-           en-mission"
+      <InView
+        as="div"
+        onChange={(inView) => {
+          if (inView) {
+            setView(inView);
+          } else {
+            setView(false);
+          }
+        }}
+        threshold={0.2}
+      >
+        <div ref={scrollRef} className="h-[200vh] snap-scroll ">
+          <div className="h-screen" />
+          <div
+            id="Mission"
+            className="relative flex flex-col items-center justify-center h-screen overflow-hidden text-center snap-item bg-black/90"
           >
-            {t(`mission.desc4`)}
-          </p>
+            <p className="section-title">{t(`mission.title`)}</p>
+            <p className=" font-bold text-[1.8rem] max-w-[240px] mt-[3.4rem] md:max-w-[600px] md:text-[2.6rem] xl:max-w-full xl:text-[3.6rem] xl:leading-[5.4rem] xl:mt-[7.2rem] ">
+              <span className="block font-bold text-[1.8rem] md:text-[2.6rem] xl:max-w-full xl:text-[3.6rem] xl:leading-[5.4rem]">
+                {t(`mission.desc1`)}
+              </span>
+              {t(`mission.desc2`)}
+            </p>
+            <p
+              className="font-semibold text-[1.4rem] w-[302px] break-keep mt-[2.4rem] md:w-[567px] xl:w-full xl:text-[2.4rem] xl:leading-[4.32rem] "
+              dangerouslySetInnerHTML={{ __html: t(`mission.desc3`) }}
+            />
+            <p
+              className="text-[1.2rem] text-[#808080] mt-[2.4rem] md:text-[1.4rem] xl:text-[1.8rem] 
+           en-mission"
+            >
+              {t(`mission.desc4`)}
+            </p>
+          </div>
         </div>
-      </div>
+      </InView>
     </section>
   );
 }

@@ -15,10 +15,15 @@ const Main = () => {
   const [missionCheck, setMissionCheck] = useState<boolean>(false);
   const [experienceCheck, setExperienceCheck] = useState<boolean>(false);
   const [communityCheck, setCommunityCheck] = useState<boolean>(false);
+  const [homeCheck, setHomeCheck] = useState<boolean>(false);
   const [screenSize, setScreenSize] = useState(window.innerWidth as number);
+  const [screenScrollY, setScreenScrollY] = useState(window.scrollY as number);
 
   const handleResize = () => {
     setScreenSize(window.innerWidth);
+  };
+  const handleScrollY = () => {
+    setScreenScrollY(window.scrollY);
   };
   useEffect(() => {
     window.addEventListener("resize", handleResize);
@@ -28,13 +33,19 @@ const Main = () => {
     };
   }, []);
 
-  useEffect(() => {}, [activeSectionIndex]);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScrollY);
+
+    return () => {
+      window.removeEventListener("scroll", handleScrollY);
+    };
+  }, []);
   return (
     <>
       <div className="overflow-hidden">
         <Header activeIndex={activeSectionIndex} />
         <div className="bg-[#111111] text-white ">
-          <Home />
+          <Home current={screenScrollY} inViewCheck={homeCheck} />
           <div className="relative z-10 bg-[#111111]">
             <InView
               as="div"
