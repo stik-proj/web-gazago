@@ -1,29 +1,29 @@
-import { createRef, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { InView } from "react-intersection-observer";
 
-export default function Home({ current, inViewCheck }: any) {
+export default function Home({ current }: any) {
   const scrollRef = useRef<null | HTMLDivElement>(null);
   const [view, setView] = useState(false);
   const { t }: any = useTranslation();
   useEffect(() => {
     if (view) {
       console.log(view);
-      scrollToMission();
+      // scrollToMission();
     }
   }, [view]);
-  const scrollToMission = () => {
-    if (current > 1 && current < 2000) {
-      if (scrollRef && scrollRef.current /* + other conditions */) {
-        scrollRef!.current!.scrollIntoView({
-          behavior: "smooth",
-          block: "end",
-        });
-        console.log(scrollRef.current);
-        console.log(current);
-      }
-    }
-  };
+  // const scrollToMission = () => {
+  //   if (current > 1 && current < 2000) {
+  //     if (scrollRef && scrollRef.current /* + other conditions */) {
+  //       scrollRef!.current!.scrollIntoView({
+  //         behavior: "smooth",
+  //         block: "end",
+  //       });
+  //       console.log(scrollRef.current);
+  //       console.log(current);
+  //     }
+  //   }
+  // };
   return (
     <section id="Home" className="h-full ">
       <div

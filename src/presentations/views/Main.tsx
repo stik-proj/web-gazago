@@ -45,7 +45,7 @@ const Main = () => {
       <div className="overflow-hidden">
         <Header activeIndex={activeSectionIndex} />
         <div className="bg-[#111111] text-white ">
-          <Home current={screenScrollY} inViewCheck={homeCheck} />
+          <Home current={screenScrollY} />
           <div className="relative z-10 bg-[#111111]">
             <InView
               as="div"
