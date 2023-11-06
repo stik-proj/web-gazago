@@ -12,7 +12,6 @@ export default function Home({ current, inViewCheck }: any) {
       scrollToMission();
     }
   }, [view]);
-  useEffect(() => {}, []);
   const scrollToMission = () => {
     if (current > 1 && current < 2000) {
       if (scrollRef && scrollRef.current /* + other conditions */) {
