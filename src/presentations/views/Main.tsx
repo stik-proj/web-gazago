@@ -15,7 +15,6 @@ const Main = () => {
   const [missionCheck, setMissionCheck] = useState<boolean>(false);
   const [experienceCheck, setExperienceCheck] = useState<boolean>(false);
   const [communityCheck, setCommunityCheck] = useState<boolean>(false);
-  const [homeCheck, setHomeCheck] = useState<boolean>(false);
   const [screenSize, setScreenSize] = useState(window.innerWidth as number);
   const [screenScrollY, setScreenScrollY] = useState(window.scrollY as number);
 
